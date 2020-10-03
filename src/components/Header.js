@@ -12,7 +12,7 @@ class Header extends Component{
                             <img src="https://via.placeholder.com/350x65" alt=""/>
                             </Link>
                         </div>
-                     
+                    
                 </div>
             </div>
     )

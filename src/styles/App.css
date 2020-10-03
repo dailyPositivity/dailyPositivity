@@ -80,11 +80,13 @@ i {
 }
 
 .startButton {
+  opacity: 0;
   margin: 0;
   padding: 10px 50px;
   font-size: 4.5rem;
   background-color: red;
   border: 2px solid black;
+  animation: fadeIn ease 3s 3s forwards;
 }
 
 .startButton:hover {
