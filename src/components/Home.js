@@ -5,12 +5,16 @@ class Home extends Component{
    render(){
       return(
          <div className = "wrapper">
-            <h1>Home Component</h1>
-            <Link to = "/category">
-               <button>
-                  <i className="fas fa-arrow-circle-down fa-4x"></i>
-               </button>
-            </Link> 
+            <div className = "homeContainer">
+               <h1>Home Component</h1>
+            </div>
+            <div>
+               <Link to = "/category">
+                  <button>
+                     <i className="fa fa-chevron-down"></i>
+                  </button>
+               </Link> 
+            </div>
          </div>
       )
    }

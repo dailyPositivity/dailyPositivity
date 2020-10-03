@@ -2,15 +2,18 @@ const catagoryList=[
 
    {
        name:"Nature",
-       path:""
+       path:require("./Assets/category-forest.jpg"),
+       description:"a nature image"
    },
    {
         name:"Beach",
-        path:""
+        path:require("./Assets/category-beach.jpg"),
+        description:"a beach image"
    },
    {
-        name:"Animal",
-        path:""
+        name:"Space",
+        path:require("./Assets/category-space.jpg"),
+        description:"a space image"
    }
 
 ]
