@@ -42,6 +42,14 @@ class App extends Component {
          })
       })
    }
+   
+   /*------------------------handle submit button functionality for Form Component----------*/
+   /*-----------------------Get details like quotes enterd by user and category name---------*/
+   submitHandler = (event,categoryDetails) => {
+      event.preventDefault();
+      // Added logic to get API details.....filter the quotes...
+      console.log(categoryDetails);//contains Categoey name and Qotes details entered by user
+   }
 
    render(){
       return (
@@ -55,7 +63,12 @@ class App extends Component {
                   <Route exact path = "/category">
                      <Category handleSelect={this.getImages} />
                   </Route>
-                  <Route exact path = "/category/:categoryName" component = {Form}/>
+                  <Route exact path = "/category/:categoryName" render = {(props) => {
+                     return(
+                        <Form {...props} formSubmitHandler = {this.submitHandler}/>
+                     )
+                  }}
+                  />
                </div>
             </main>
             <footer>

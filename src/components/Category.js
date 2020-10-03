@@ -11,8 +11,8 @@ class Category extends Component{
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
-                        <Link to = {`/category/${category.name}`} onClick={() => this.props.handleSelect(category.name)}>
-                           <div key = {index}>
+                        <Link to = {`/category/${category.name}`} onClick={() => this.props.handleSelect(category.name)} key={index}>
+                           <div>
                               <div className = "categoryImg">
                                  <img src={category.path} alt = {category.description}/>
                               </div>
