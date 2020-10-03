@@ -11,7 +11,7 @@ class Category extends Component{
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
-                        <Link to = {`/category/:${category}`}>
+                        <Link to = {`/category/${category.name}`} >
                            <div key = {index}>
                               <div className = "categoryImg">
                                  <img src={category.path} alt = {category.description}/>
