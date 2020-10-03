@@ -18,11 +18,57 @@ main{
 body{
   color:white;
   font-size: 2rem;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
   /* font-family: 'Barlow', sans-serif;
   font-family: 'Cormorant Garamond', serif; */
+}
+h1{
+  font-family: 'Cormorant Garamond', serif;
 }
 .wrapper{
   width: 90%;
   min-width: 320px;
   max-width: 1400px;
+  margin:0 auto;
+}
+/*----------------------------------------------HOME----------------------------------------------*/
+/* i::before{
+  background:transparent
+}
+i {
+  text-shadow: 2px 2px #000000;
+  color:white;
+  font-size: 8rem;
+} */
+.homeContainer{
+  height: 75vh;
+}
+/*----------------------------------------------CATEGORY----------------------------------------------*/
+.categoryContainer{
+  display:flex;
+  justify-content:space-evenly;
+  margin-top:100px;
+  padding:10px;
+}
+.categoryItem{
+  flex-basis: 25%;
+}
+.categoryImg{
+  width:70%;
+}
+.categoryImg img{
+  width:100%;
+}
+
+/*-------------------------------------------------FOOTER----------------------------------------------*/
+footer {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+}
+
+footer p {
+  padding-bottom:20px;
 }
