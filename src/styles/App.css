@@ -61,6 +61,23 @@ i {
   width:100%;
 }
 
+/*-------------------------------------------------Form----------------------------------------------*/
+
+.slidePreview {
+   background-color: red;
+   max-width: 30%;
+   
+}
+
+.slidePreview h2 {
+   font-size: 7rem;
+   font-style: italic;
+}
+
+.slideImgContainer img {
+   width: 100%;
+}
+
 /*-------------------------------------------------FOOTER----------------------------------------------*/
 footer {
   text-align: center;
