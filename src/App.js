@@ -52,7 +52,9 @@ class App extends Component {
             <main>
                <div className="App">
                   <Route exact path = "/" component = {Home}/>
-                  <Route exact path = "/category" component = {Category}/>
+                  <Route exact path = "/category">
+                     <Category handleSelect={this.getImages} />
+                  </Route>
                   <Route exact path = "/category/:categoryName" component = {Form}/>
                </div>
             </main>
