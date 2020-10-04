@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import categoryList from '../categoryList';
 import InputQuote from './InputQuote';
+import StartSlideshowButton from './StartSlideshowButton';
 
 class Form extends Component{
    getCategoryImagePath(){  
@@ -23,15 +24,11 @@ class Form extends Component{
                <h3>{name}</h3>
              </div>
              <div className = "categoryForm">
-               <form onSubmit={this.props.submitHandler}>
+               <form>
                   <InputQuote name={"userQuote1"} changeHandler={this.props.changeHandler} />
                   <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} />
                   <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} />
-                  <div className = "noteComposeButton" aria-label="submit button to save the  note entry">
-                  <button>
-                        Submit
-                  </button>               
-                  </div>
+                  <StartSlideshowButton handleSubmit={this.props.submitHandler} />
                </form>
              </div>
          </div>
