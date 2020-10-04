@@ -25,6 +25,7 @@ class App extends Component {
          params: {
             client_id: 'UXdr3j-2x0CZ4juRAeome9itr5n0Igi-ddjbE3gjO-A',
             query: category,
+            orientation: 'landscape',
          }
       })
       .then((response) => {
