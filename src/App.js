@@ -9,6 +9,7 @@ import Form from './components/Form';
 import Home from './components/Home';
 import Slideshow from './components/Slideshow';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 class App extends Component {
    constructor() {
@@ -19,17 +20,18 @@ class App extends Component {
          userQuote1: '',
          userQuote2: '',
          userQuote3: '',
+
       }
    }
 
    // request images of a certain category from Unsplash API
    getImages = (category) => {
-      
       axios({
          url: 'https://api.unsplash.com/search/photos',
          params: {
             client_id: 'UXdr3j-2x0CZ4juRAeome9itr5n0Igi-ddjbE3gjO-A',
             query: category,
+            orientation: 'landscape',
          }
       })
       .then((response) => {
@@ -84,6 +86,7 @@ class App extends Component {
          <Router>
             <header>
                {/* header Component  to shown on every spage */}
+               <Header />
             </header>
             <main>
                <div className="App">
