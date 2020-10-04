@@ -9,6 +9,7 @@ import Form from './components/Form';
 import Home from './components/Home';
 import Slideshow from './components/Slideshow';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 class App extends Component {
    constructor() {
@@ -57,7 +58,7 @@ class App extends Component {
          <Router>
             <header>
                {/* header Component  to shown on every spage */}
-               
+               <Header />
             </header>
             <main>
                <div className="App">
