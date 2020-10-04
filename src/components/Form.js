@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import categoryList from '../categoryList';
-class Form extends Component{
-   constructor(){
-      super();
-      this.state = {
-         categoryName:'',
-         quote1:'',
-         quote2:'',
-         quote3:''
-      }
-   }
+import InputQuote from './InputQuote';
 
    getCategoryImagePath(){  
       const filteredCategory = categoryList.filter((category) => {
@@ -43,19 +34,10 @@ class Form extends Component{
                <h3>{name}</h3>
              </div>
              <div className = "categoryForm">
-               <form onSubmit = {(event) => {this.props.formSubmitHandler(event,{...this.state})}}>
-                  <div className = "noteTextArea">
-                        <label htmlFor = "quote1" className="visuallyHidden">Enter content for the entry</label>
-                        <textarea  id = "quote1" name = "quote1" value = {this.state.quote1}  placeholder = "add your quote here" onChange = {this.changeHandler}/>    
-                  </div>
-                  <div className = "noteTextArea">
-                        <label htmlFor = "quote2" className="visuallyHidden">Enter content for the entry</label>
-                        <textarea  id = "quote2" name = "quote2" value = {this.state.quote2}  placeholder = "add your quote here" onChange = {this.changeHandler}/>    
-                  </div>
-                  <div className = "noteTextArea">
-                        <label htmlFor = "quote3" className="visuallyHidden">Enter content for the entry</label>
-                        <textarea  id = "quote3" name = "quote3" value = {this.state.quote3}  placeholder = "add your quote here" onChange = {this.changeHandler}/>    
-                  </div>
+               <form onSubmit={this.props.submitHandler}>
+                  <InputQuote name={"userQuote1"} changeHandler={this.props.changeHandler} />
+                  <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} />
+                  <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} />
                   <div className = "noteComposeButton" aria-label="submit button to save the  note entry">
                   <button>
                         Submit
