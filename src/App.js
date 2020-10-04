@@ -97,7 +97,7 @@ class App extends Component {
                   <Route exact path = "/category/:categoryName">
                      <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} />
                   </Route>
-                  <Route exact path="/slideshow/:categoryName/slideshow">
+                  <Route exact path="/category/:categoryName/slideshow">
                      <Slideshow images={this.state.imageArray} quotes={this.state.quoteArray} />
                   </Route>
                </div>
