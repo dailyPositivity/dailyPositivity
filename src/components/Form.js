@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import categoryList from '../categoryList';
 import InputQuote from './InputQuote';
 
+class Form extends Component{
    getCategoryImagePath(){  
       const filteredCategory = categoryList.filter((category) => {
             return(category.name === this.props.match.params.categoryName);
@@ -10,23 +11,11 @@ import InputQuote from './InputQuote';
       return filteredCategory[0];
    }
 
-   /*----------------------------------------Change handler for user enterd Quotes--------------------*/
-   changeHandler = (event) => {
-      this.setState({
-         [event.target.name]:event.target.value
-      });
-   }
-
    /*-----------------------------------Submit handler for move to slidshow Component ----------------*/
-   componentDidMount(){
-      //update state with  in category name parameter passed in by Category Component
-      this.setState({
-         categoryName: this.props.match.params.categoryName
-      })
-   }
    render(){
       //filter categoryList array as per passed in category by Category Component
       const {name,path,description} = {...this.getCategoryImagePath()};
+
       return(
          <div className = "categoryFormContainer">
              <div className = "categoryFormImg">
