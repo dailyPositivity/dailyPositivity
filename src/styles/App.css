@@ -29,7 +29,14 @@ a {
   text-decoration: none;
 }
 
-body{
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+body {
   background-color: #ededc3;
   color:#e7635d;
   font-size: 2rem;
@@ -68,8 +75,6 @@ i {
 .categoryContainer{
   display:flex;
   justify-content:space-evenly;
-  margin-top:100px;
-  padding:10px;
 }
 
 .categoryItem {
@@ -98,10 +103,7 @@ i {
 
 /*-------------------------------------------------FOOTER----------------------------------------------*/
 footer {
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  bottom:0;
+  margin: 10px 0;
 }
 
 
