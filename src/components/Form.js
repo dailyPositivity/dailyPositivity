@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import categoryList from '../categoryList';
 class Form extends Component{
    constructor(){
@@ -12,10 +13,10 @@ class Form extends Component{
    }
 
    getCategoryImagePath(){  
-      const filteredcategory = categoryList.filter((category) => {
-            return(category.name === this.state.categoryName);
+      const filteredCategory = categoryList.filter((category) => {
+            return(category.name === this.props.match.params.categoryName);
          })
-      return filteredcategory[0];
+      return filteredCategory[0];
    }
 
    /*----------------------------------------Change handler for user enterd Quotes--------------------*/
@@ -67,4 +68,4 @@ class Form extends Component{
    }
 }
 
-export default Form;
+export default withRouter(Form);
