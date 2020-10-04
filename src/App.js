@@ -56,9 +56,7 @@ class App extends Component {
    }
 
    // request quotes from Quotable API and combine with user-inputted quotes
-   handleSubmit = (event) => {
-      event.preventDefault();
-
+   handleSubmit = () => {
       // create array of non-empty quotes inputted by user
       const { userQuote1, userQuote2, userQuote3 } = this.state;
       const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0)
