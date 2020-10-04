@@ -11,8 +11,13 @@ class Category extends Component{
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
+<<<<<<< Updated upstream
                         <Link to = {`/category/${category.name}`} key = {index}>
                            <div>
+=======
+                        <Link to = {`/category/${category.name}`} onClick={() => this.props.handleSelect(category.name)}>
+                           <div key = {index} className="categoryItem">
+>>>>>>> Stashed changes
                               <div className = "categoryImg">
                                  <img src={category.path} alt = {category.description}/>
                               </div>
