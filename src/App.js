@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.css';
+import axios from 'axios';
 import { BrowserRouter as Router, Route  } from 'react-router-dom';
 // Components
 import Category from './components/Category';
@@ -10,6 +11,38 @@ import Slideshow from './components/Slideshow';
 import Footer from './components/Footer';
 
 class App extends Component {
+   constructor() {
+      super();
+      this.state = {
+         imageArray: [],
+      }
+   }
+
+   // request images of a certain category from Unsplash API
+   getImages = (category) => {
+      axios({
+         url: 'https://api.unsplash.com/search/photos',
+         params: {
+            client_id: 'UXdr3j-2x0CZ4juRAeome9itr5n0Igi-ddjbE3gjO-A',
+            query: category,
+            orientation: 'landscape',
+         }
+      })
+      .then((response) => {
+         const results = response.data.results.map((obj) => {
+            // capture the important values from the Unsplash response
+            return {
+               url: obj.urls.full,
+               alt: obj.alt_description,
+               id: obj.id,
+               photographer: obj.user.name,
+            }
+         })
+         this.setState({
+            imageArray: results,
+         })
+      })
+   }
    
    /*------------------------handle submit button functionality for Form Component----------*/
    /*-----------------------Get details like quotes enterd by user and category name---------*/
@@ -29,7 +62,9 @@ class App extends Component {
             <main>
                <div className="App">
                   <Route exact path = "/" component = {Home}/>
-                  <Route exact path = "/category" component = {Category}/>
+                  <Route exact path = "/category">
+                     <Category handleSelect={this.getImages} />
+                  </Route>
                   <Route exact path = "/category/:categoryName" render = {(props) => {
                      return(
                         <Form {...props} formSubmitHandler = {this.submitHandler}/>
