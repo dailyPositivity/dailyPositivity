@@ -38,9 +38,14 @@ body{
   /* font-family: 'Barlow', sans-serif;
   font-family: 'Cormorant Garamond', serif; */
 }
-h1{
+
+h1 {
   font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;  /* TODO: responsive font size */
+  margin: 25px 0;
+  color: #d03529;
 }
+
 .wrapper{
   width: 90%;
   min-width: 320px;
@@ -99,9 +104,6 @@ footer {
   bottom:0;
 }
 
-footer p {
-  padding-bottom:20px;
-}
 
 
 
