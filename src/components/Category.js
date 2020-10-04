@@ -12,7 +12,7 @@ class Category extends Component{
                {  categories.map((category,index) => {
                      return (
                         <Link to = {`/category/${category.name}`} onClick={() => this.props.handleSelect(category.name)} key={index}>
-                           <div>
+                           <div className="categoryItem">
                               <div className = "categoryImg">
                                  <img src={category.path} alt = {category.description}/>
                               </div>
