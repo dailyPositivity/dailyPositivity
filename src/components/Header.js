@@ -6,13 +6,10 @@ class Header extends Component{
     render(){
         return(
             <div className = "wrapper">
-                <div className = "headerHoverContainer">
-                        <div className="headerHiddenContainer">
+                <div className = "headerContainer">
                             <Link to = "/">
-                            <img src="https://via.placeholder.com/350x65" alt=""/>
+                            <img src="https://via.placeholder.com/100x100" alt=""/>
                             </Link>
-                        </div>
-                    
                 </div>
             </div>
     )
