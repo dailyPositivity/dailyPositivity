@@ -16,6 +16,11 @@ class App extends Component {
       super();
       this.state = {
          imageArray: [],
+         quoteArray: [],
+         userQuote1: '',
+         userQuote2: '',
+         userQuote3: '',
+
       }
    }
 
@@ -45,12 +50,35 @@ class App extends Component {
       })
    }
    
-   /*------------------------handle submit button functionality for Form Component----------*/
-   /*-----------------------Get details like quotes enterd by user and category name---------*/
-   submitHandler = (event,categoryDetails) => {
-      event.preventDefault();
-      // Added logic to get API details.....filter the quotes...
-      console.log(categoryDetails);//contains Categoey name and Qotes details entered by user
+   // handleChange
+   handleChange = (event) => {
+      this.setState({
+         [event.target.name]: event.target.value
+      })
+   }
+
+   // request quotes from Quotable API and combine with user-inputted quotes
+   handleSubmit = () => {
+      // create array of non-empty quotes inputted by user
+      const { userQuote1, userQuote2, userQuote3 } = this.state;
+      const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0)
+
+
+      axios({
+         url: `https://api.quotable.io/quotes?limit=${10 - userQuotes.length}`
+      })
+      .then((response) => {
+         const results = response.data.results.map((quoteObject) => {
+            /* TODO: decide if we want to include author,
+                     and if so, how to handle user-inputted quotes (author field?) */
+            return quoteObject.content;
+         })
+         this.setState({
+            /* TODO: decide if we want to shuffle the quote array
+                     or have userQuotes at fixed positions */
+            quoteArray: userQuotes.concat(results),
+         })
+      })
    }
 
    render(){
@@ -66,12 +94,12 @@ class App extends Component {
                   <Route exact path = "/category">
                      <Category handleSelect={this.getImages} />
                   </Route>
-                  <Route exact path = "/category/:categoryName" render = {(props) => {
-                     return(
-                        <Form {...props} formSubmitHandler = {this.submitHandler}/>
-                     )
-                  }}
-                  />
+                  <Route exact path = "/category/:categoryName">
+                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} />
+                  </Route>
+                  <Route exact path="/category/:categoryName/slideshow">
+                     <Slideshow images={this.state.imageArray} quotes={this.state.quoteArray} />
+                  </Route>
                </div>
             </main>
             <footer>
