@@ -10,6 +10,15 @@ import Slideshow from './components/Slideshow';
 import Footer from './components/Footer';
 
 class App extends Component {
+   
+   /*------------------------handle submit button functionality for Form Component----------*/
+   /*-----------------------Get details like quotes enterd by user and category name---------*/
+   submitHandler = (event,categoryDetails) => {
+      event.preventDefault();
+      // Added logic to get API details.....filter the quotes...
+      console.log(categoryDetails);//contains Categoey name and Qotes details entered by user
+   }
+
    render(){
       return (
          <Router>
@@ -21,7 +30,12 @@ class App extends Component {
                <div className="App">
                   <Route exact path = "/" component = {Home}/>
                   <Route exact path = "/category" component = {Category}/>
-                  <Route exact path = "/category/:categoryName" component = {Form}/>
+                  <Route exact path = "/category/:categoryName" render = {(props) => {
+                     return(
+                        <Form {...props} formSubmitHandler = {this.submitHandler}/>
+                     )
+                  }}
+                  />
                </div>
             </main>
             <footer>
