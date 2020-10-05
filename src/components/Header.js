@@ -7,9 +7,9 @@ class Header extends Component{
         return(
             <div className = "wrapper">
                 <div className = "headerContainer">
-                            <Link to = "/">
-                            <img src="https://via.placeholder.com/100x100" alt=""/>
-                            </Link>
+                    <Link to = "/">
+                        <img src="https://via.placeholder.com/100x100" alt=""/>
+                    </Link>
                 </div>
             </div>
     )

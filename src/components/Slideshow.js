@@ -40,7 +40,6 @@ class Slideshow extends Component{
 
    render(){
       return(
-
          <div className = "slideshowContainer">
             <button className = "slideshowBtnLeft" disabled={this.state.currentSlide  === 0}>
                <i className="fa fa-chevron-left" onClick = {this.prevNextHandler} name = "previous" ></i>
