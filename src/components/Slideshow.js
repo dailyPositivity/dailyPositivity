@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Slideshow extends Component{
    constructor(props){
@@ -7,6 +8,16 @@ class Slideshow extends Component{
          currentSlide:0,
       }
    }
+
+   componentDidMount() {
+      // retrieve images from Unsplash API
+      const category = this.props.match.params.categoryName;
+      this.props.getImages(category);
+      this.props.getQuotes();
+
+      setInterval(this.autoPlay,3000);
+   }
+
    prevNextHandler = (event) => {
       console.log(event.target.name);
       if(event.target.name === "previous"){
@@ -36,10 +47,6 @@ class Slideshow extends Component{
       }
    }
 
-   componentDidMount(){
-      setInterval(this.autoPlay,3000);
-   }
-
    render(){
       return(
          <div className = "slideshowContainer">
@@ -66,9 +73,16 @@ class Slideshow extends Component{
                <i className="fa fa-chevron-right" onClick ={this.prevNextHandler} name="next"></i>
                {/* &raquo; */}
             </button>
+            <div className="slideSpeed">
+               <button className="pause">||</button>
+               <button className="play">Play</button>
+               <button className="speedInterval">x2</button>
+               <button className="speedInterval">x3</button>
+               <button className="speedInterval">x5</button>
+            </div>
          </div>      
       )
    }
 }
 
-export default Slideshow;
+export default withRouter(Slideshow);
