@@ -309,7 +309,7 @@ footer {
 .noteTextArea textarea:active{
   outline:#d03529 solid 1px;
 }
-.slideshowStartBtn button{
+.slideshowStartBtn{
   height: 50px;
   outline:none;
   background: #e7635d;
@@ -317,8 +317,8 @@ footer {
   padding:1rem;
   color:#ededc3;
 }
-.slideshowStartBtn button:hover,
-.slideshowStartBtn button:focus{
+.slideshowStartBtn:hover,
+.slideshowStartBtn:focus{
   background: #d03529;
   outline:#d03529 solid 1px;
   outline-offset: 2px;

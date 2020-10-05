@@ -30,7 +30,7 @@ class Form extends Component{
                      <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} />
                      <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} />
                      <Link to={`/category/${name}/slideshow`} >
-                     <button type="button">
+                     <button type="button" className = "slideshowStartBtn">
                         Start Slideshow
                      </button>
                      </Link>
