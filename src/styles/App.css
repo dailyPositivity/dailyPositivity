@@ -88,17 +88,12 @@ i {
   color: #E7635D;
   animation: fadeIn ease 3s 1s forwards;
 }
-.headerContainer {
-  opacity: 0;
-  text-align: left;
-  position: relative;
-  height: 100px;
-  animation: fadeIn ease 3s 3s forwards;
-}
 .headerContainer img {
+  opacity: 0;
   position: absolute;
-  top: 20px;
-  left: 0px;
+  top: 9%;
+  left: 7%;
+  animation: fadeIn ease 3s 3s forwards;
 }
 .startButton {
   opacity: 0;
