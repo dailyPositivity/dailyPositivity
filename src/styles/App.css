@@ -34,7 +34,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 98vh;
   /* --main-logo-color:#d03529;
   --main-body-color:#ededc3;
   --main-highlight-color:#e7635d; */
@@ -76,11 +76,11 @@ i {
 
 .homeContainer{
   padding-top: 5%;
-  height: 75vh;
+  height: 95%;
 }
 .homeContainer h1 {
-  margin: 4%;
-  font-size: 14.5rem;
+  margin-top: 100px;
+  font-size:calc(20px + 6vw);
   text-transform: uppercase;
   color: red;
   animation: fadeIn ease 3s;
@@ -88,7 +88,7 @@ i {
 }
 .homeContainer p {
   font-family: 'Barlow', sans-serif;
-  font-size: 2.5rem;
+  font-size:calc(12px + 1.5vw);
   opacity: 0;
   color: #E7635D;
   animation: fadeIn ease 3s 1s forwards;
@@ -102,9 +102,8 @@ i {
 }
 .startButton {
   opacity: 0;
-  margin-top: 150px;
+  margin: 5%;
   padding: 10px 50px;
-  font-size: 4.5rem;
   background-color: red;
   border: 2px solid black;
   animation: fadeIn ease 3s 3s forwards;
@@ -194,8 +193,6 @@ i {
 }
 
 .slideImg {
-  width: 90vw;
-  height: 80vh;
   width: 100vw;
   height: 100vh;
 }
@@ -214,6 +211,26 @@ i {
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
+}
+
+.imageContainer {
+  height: 100vh;
+}
+
+.quoteContainer{
+  position:absolute;
+  bottom: 50px;
+  right: 70px;
+  width: 25%;
+  text-align: left;
+  color: white;
+  background-color: hsla(0, 7%, 32%, 0.6);
+  padding: 25px;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.quoteContainer p{
+  font-size:calc(12px + 0.8vw);
 }
 
 /* slideshow speed change */
@@ -240,12 +257,12 @@ i {
    background-color: #f9f9ed;
    color: #E7635D;
 }
+
 /*-------------------------------------------------FOOTER----------------------------------------------*/
 footer {
   color: #f9f9ed;
   text-align: center;
   text-shadow: 2px 2px 2px #000000;
-
 }
 
 /* @media (max-height: 800px) {
