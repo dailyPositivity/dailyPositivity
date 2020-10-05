@@ -10,9 +10,9 @@ const StartSlideshowButton = (props) => {
   }
 
   return (
-    <div className = "noteComposeButton" aria-label="submit button to save the  note entry">
+    <div className = "slideshowStartBtn" aria-label="Button to save the quotes and start the slideshow">
         <button type="button" onClick={handleClick}>
-        Start Slideshow
+        Generate Your Slideshow
         </button>
     </div>
   );
