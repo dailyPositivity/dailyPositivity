@@ -43,30 +43,23 @@ class Slideshow extends Component{
    render(){
       return(
          <div className = "slideshowContainer">
-            <button className = "slideshowBtnLeft" onClick = {this.prevNextHandler} name = "previous" disabled={this.state.currentSlide  === 0}>
-               <i className="fa fa-chevron-left"  ></i>
+            <button className = "slideshowBtnLeft" disabled={this.state.currentSlide  === 0}>
+               <i className="fa fa-chevron-left" onClick = {this.prevNextHandler} name = "previous"  ></i>
                {/* &laquo; */}
             </button>
             <div className = "slideImg">
-            {/* {  this.props.images.length> 1 ? 
-               (  this.state.currentSlide < this.props.images.length ? 
-                  <img src = {this.props.images[this.state.currentSlide].url} alt = {this.props.images[this.state.currentSlide].alt}/>                   
-                  : <h2 className="endingMessage">Thank you for watching</h2>  
-                  )             
-               : <h2 className="endingMessage">Category not selected.Select the category first.</h2>  
-            }          */}
-             {  this.props.images.length > 1 ? 
-               (  this.state.currentSlide < this.props.images.length ?
-                  <div className="imageContainer"> 
-                     <img src = {this.props.images[this.state.currentSlide].url} alt = {this.props.images[this.state.currentSlide].alt}/>
-                     <div className="quoteContainer">
-                        <p>{this.props.quotes[this.state.currentSlide]}</p>  
-                     </div> 
-                  </div>                  
-                  : <h2 className="endingMessage">Thank you for watching</h2>  
-                  )             
-               : <h2 className="endingMessage">Category not selected.Select the category first.</h2>  
-            }      
+               {this.props.images.length > 1 ? 
+                  (  this.state.currentSlide < this.props.images.length ?
+                     <div className="imageContainer"> 
+                        <img src = {this.props.images[this.state.currentSlide].url} alt = {this.props.images[this.state.currentSlide].alt}/>
+                        <div className="quoteContainer">
+                           <p>{this.props.quotes[this.state.currentSlide]}</p>  
+                        </div> 
+                     </div>                  
+                     : <h2 className="endingMessage">Thank you for watching</h2>  
+                     )             
+                  : <h2 className="endingMessage">Category not selected.Select the category first.</h2>  
+               }      
             </div>
             <button className = "slideshowBtnRight" disabled={this.state.currentSlide === this.props.images.length}>
                <i className="fa fa-chevron-right" onClick = {this.prevNextHandler} name = "next"></i>
