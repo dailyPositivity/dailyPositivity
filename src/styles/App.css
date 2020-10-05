@@ -157,6 +157,52 @@ i {
   padding: 10px;
 }
 
+/*-------------------------------------------------Form----------------------------------------------*/
+
+.slidePreview {
+   background-color: red;
+   max-width: 30%;
+   
+}
+
+.slidePreview h2 {
+   font-size: 7rem;
+   font-style: italic;
+}
+
+.slideImgContainer img {
+   width: 100%;
+}
+
+/*-------------------------------------------------Slideshow----------------------------------------------*/
+.slideshowBackground{
+   background-color: black;
+   position: relative;
+}
+
+.slideshowBtnRight,
+.slideshowBtnLeft {
+   background-color: #E7635D;
+}
+
+.slideshowContainer{
+   display: flex;
+   justify-content: center;
+}
+
+.slideImg {
+   width: 90vw;
+   height: 80vh;
+   
+}
+.slideImg img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+
+
 /*-------------------------------------------------FOOTER----------------------------------------------*/
 footer {
   margin: 10px 0;
