@@ -41,7 +41,8 @@ a {
 }
 
 body {
-  background-color: #ededc3;
+   background-image: linear-gradient(#d03529, #ededc3);
+  /* background-color: #ededc3; */
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
@@ -54,7 +55,7 @@ h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 6rem;  /* TODO: responsive font size */
   margin: 25px 0;
-  color: var(--main-logo-color);
+  color: #ededc3;
 }
 
 .wrapper{
@@ -109,8 +110,8 @@ i {
   animation: fadeIn ease 3s 3s forwards;
 }
 .startButton:hover {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #f9f9ed;
+  color: #f9f9ed;
 }
 
 @keyframes fadeIn {
@@ -154,6 +155,9 @@ i {
 
 .categoryItem h3 {
   padding: 10px;
+}
+.categoryItem:hover{
+   background-color: #ededc3;
 }
 
 /*-------------------------------------------------Form----------------------------------------------*/
@@ -204,16 +208,41 @@ i {
 .endingMessage{
   font-family: 'Barlow', sans-serif;
   font-size: 4rem;
-  color:#d03529;
+  color:#f9f9ed;
+  text-shadow: 2px 2px 2px #1c0b0a;
   position:relative;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
 }
 
+/* slideshow speed change */
+.slideSpeed {
+   position: absolute;
+   bottom: 1rem;
+   right: 4rem;
+   border-radius: 1.5rem;
+   background-color: #E7635D;
+}
+.slideSpeed button{
+   background-color: inherit;
+   color: #f9f9ed;
+   font-size: 2rem;
+   margin: 0.2rem;
+   padding: 1rem;
+   border-radius: 1.5rem;
+}
+.slideSpeed button:hover{
+   background-color: #f9f9ed;
+   color: #E7635D;
+}
+.slideSpeed button:focus{
+   background-color: #f9f9ed;
+   color: #E7635D;
+}
 /*-------------------------------------------------FOOTER----------------------------------------------*/
 footer {
-  color: white;
+  color: #f9f9ed;
   text-align: center;
   text-shadow: 2px 2px 2px #000000;
 
