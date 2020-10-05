@@ -21,10 +21,9 @@ class Slideshow extends Component{
                      <button className = "slideshowBtnLeft">
                         <i className="fa fa-chevron-left"></i>
                      </button>
-                   <div className = "slideImg">
+                  <div className = "slideImg">
                      <img src = {this.props.images[0].url} alt = {description}/>
-                     <h3>{name}</h3>
-                   </div>
+                  </div>
                      <button className = "slideshowBtnRight">
                         <i className="fa fa-chevron-right"></i>
                      </button>
