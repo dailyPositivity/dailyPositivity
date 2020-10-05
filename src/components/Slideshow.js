@@ -13,6 +13,7 @@ class Slideshow extends Component{
       // retrieve images from Unsplash API
       const category = this.props.match.params.categoryName;
       this.props.getImages(category);
+      this.props.getQuotes();
 
       setInterval(this.autoPlay,3000);
    }

@@ -58,11 +58,10 @@ class App extends Component {
    }
 
    // request quotes from Quotable API and combine with user-inputted quotes
-   handleSubmit = () => {
+   getQuotes = () => {
       // create array of non-empty quotes inputted by user
       const { userQuote1, userQuote2, userQuote3 } = this.state;
       const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0)
-
 
       axios({
          url: `https://api.quotable.io/quotes?limit=${10 - userQuotes.length}`
@@ -98,7 +97,12 @@ class App extends Component {
                      <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} />
                   </Route>
                   <Route exact path="/category/:categoryName/slideshow">
-                     <Slideshow images={this.state.imageArray} quotes={this.state.quoteArray} getImages={this.getImages} />
+                     <Slideshow
+                        images={this.state.imageArray}
+                        quotes={this.state.quoteArray}
+                        getImages={this.getImages}
+                        getQuotes={this.getQuotes}
+                     />
                   </Route>
                </div>
             </main>

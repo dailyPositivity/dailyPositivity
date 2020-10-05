@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import categoryList from '../categoryList';
 import InputQuote from './InputQuote';
-import StartSlideshowButton from './StartSlideshowButton';
 
 class Form extends Component{
    getCategoryImagePath(){  
@@ -28,7 +27,13 @@ class Form extends Component{
                   <InputQuote name={"userQuote1"} changeHandler={this.props.changeHandler} />
                   <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} />
                   <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} />
-                  <StartSlideshowButton handleSubmit={this.props.submitHandler} />
+                  {/*<StartSlideshowButton />*/}
+                  <Link to={`/category/${name}/slideshow`} >
+                     <button type="button">
+                        Start Slideshow
+                     </button>
+                  </Link>
+                  
                </form>
              </div>
          </div>
