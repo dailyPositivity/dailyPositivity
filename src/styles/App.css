@@ -37,7 +37,8 @@ a {
 }
 
 body {
-  background-color: #ededc3;
+   background-image: linear-gradient(#d03529, #ededc3);
+  /* background-color: #ededc3; */
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
