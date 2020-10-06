@@ -44,7 +44,6 @@ body {
 .titleContainer{
    display: flex;
    justify-content: center;
-   background-image: linear-gradient(#d03529, #ededc3);
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
@@ -80,7 +79,11 @@ h1 {
  }
 
  .logo {
-   width: 8rem;
+    background-color: #E7635D;
+   border-radius: 50%;
+   padding: 0.5rem;
+   width: 10rem;
+
 }
 
 .logo:hover{
@@ -286,16 +289,9 @@ footer {
   color: #f9f9ed;
   text-align: center;
   text-shadow: 2px 2px 2px #000000;
-  height: 30px;
+  height: 3vh;
+  background-color: black;
 }
-
-/* @media (max-height: 800px) {
-  footer {
-    display: none;
-  }
-} */
-
-
 
 /*------------------------------------------------CategoryForm---------------------------------------*/
 .formContainer{

@@ -8,7 +8,6 @@ class Category extends Component{
       return(
 
          <div className = "category wrapper">
-            <h1>Pick Category</h1>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
