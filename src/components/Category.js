@@ -8,6 +8,7 @@ class Category extends Component{
       return(
 
          <div className = "category wrapper">
+            <h3>Choose your vibe</h3>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
@@ -23,7 +24,6 @@ class Category extends Component{
                   })
                }
             </div>
-            <h3>Choose your vibe...</h3>
          </div>
       )//End of return
    }//End of render()
