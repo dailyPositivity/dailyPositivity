@@ -293,8 +293,9 @@ footer {
   text-align: center;
   text-shadow: 2px 2px 2px #000000;
   height: 3vh;
-  height: 30px;
+  height: 32px;
   background-color: black;
+  padding: 3px;
 }
 
 /*------------------------------------------------CategoryForm---------------------------------------*/
@@ -387,6 +388,7 @@ footer {
   }
   .categoryContainer {
     margin-top: 50px;
+    margin-bottom: 10px;
   }
   .categoryContainer a {
     width: 50%;
