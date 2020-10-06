@@ -8,7 +8,11 @@ class Header extends Component{
             <div className = "wrapper">
                 <div className = "headerContainer">
                     <Link to = "/">
-                        <img src="https://via.placeholder.com/100x100" alt=""/>
+                        <img className="logo" src="https://www.flaticon.com/svg/static/icons/svg/3159/3159094.svg"/>
+                        {/* OTHER IMAGES
+                           https://www.flaticon.com/svg/static/icons/svg/1295/1295535.svg
+                           https://www.flaticon.com/svg/static/icons/svg/3159/3159094.svg
+                           https://www.flaticon.com/svg/static/icons/svg/2714/2714077.svg */}
                     </Link>
                 </div>
             </div>

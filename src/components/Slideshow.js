@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 
 class Slideshow extends Component{
    constructor(props){
@@ -36,9 +36,15 @@ class Slideshow extends Component{
 
    componentDidMount(){
       // if button is clicked 
-      // set time interval to x
+         // set time interval to x
       setInterval(this.autoPlay,3000);
    }
+
+   // onClick of stopSlide, the show will end
+   handleClick(){
+      setInterval(this.autoPlay, 0)
+   }
+
 
    render(){
       return(
@@ -66,6 +72,10 @@ class Slideshow extends Component{
                <button className="speedInterval">x2</button>
                <button className="speedInterval">x3</button>
                <button className="speedInterval">x5</button>
+               <button 
+               onClick={() => this.handleClick()} 
+               className="stopSlide">End</button>
+               
             </div>
          </div>      
       )

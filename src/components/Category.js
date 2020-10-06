@@ -7,7 +7,6 @@ class Category extends Component{
       const categories = categoryList;
       return(
          <div className = "wrapper">
-            <h1>Pick Category</h1>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
@@ -16,13 +15,14 @@ class Category extends Component{
                               <div className = "categoryImg">
                                  <img src={category.path} alt = {category.description}/>
                               </div>
-                              <h3>{category.name}</h3>
+                              <h4>{category.name}</h4>
                            </div>
                         </Link>
                      )
                   })
                }
             </div>
+            <h3>Choose your vibe...</h3>
          </div>
       )//End of return
    }//End of render()
