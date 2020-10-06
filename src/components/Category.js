@@ -6,7 +6,7 @@ class Category extends Component{
    render(){
       const categories = categoryList;
       return(
-         <div className = "wrapper">
+         <div className = "category wrapper">
             <h1>Pick Category</h1>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
