@@ -10,15 +10,6 @@ html{
   font-size: 62.5%;
 }
 
-/* removing this --------------------------------
-/ main{
-/   background-image: url(./assets/background-img-by-mona-eendra.jpg);
-/   background-repeat: no-repeat;
-/   background-size: cover;
-/   height: 100vh;
-/ }
------------------------------------------------ */
-
 /* DEFAULT STRIPPING -------------------------------------------------------- */
 button {
   border: none;
@@ -30,87 +21,117 @@ a {
   text-decoration: none;
 }
 
+
 #root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  background-image: linear-gradient(#d03529, #ededc3);
+  min-height: 100vh;
+  /* background-image: linear-gradient(#d03529, #ededc3); */
   /* --main-logo-color:#d03529;
   --main-body-color:#ededc3;
   --main-highlight-color:#e7635d; */
 }
 
 body {
-  /* background-color: #ededc3; */
+   background-image: linear-gradient(#d03529, #ededc3);
+   color:#e7635d;
+   font-size: 2rem;
+   text-align: center;
+   font-family: 'Barlow', sans-serif;
+}
+
+.titleContainer{
+   display: flex;
+   justify-content: center;
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
   font-family: 'Barlow', sans-serif;
-  /* font-family: 'Barlow', sans-serif;
-  font-family: 'Cormorant Garamond', serif; */
 }
 
 h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 6rem;  /* TODO: responsive font size */
-  margin: 25px 0;
-  color: #ededc3;
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 1rem;  /* TODO: responsive font size */
+   margin: 2rem 0;
+   color: #ededc3;
+   letter-spacing: 3rem;
 }
 
+.titleContainer span{
+   display: flex;
+   letter-spacing: -0.1rem;
+}
 .wrapper{
-  width: 90%;
-  min-width: 320px;
-  max-width: 1400px;
-  margin:0 auto;
+   width: 90%;
+   min-width: 320px;
+   max-width: 1400px;
+   margin:0 auto;
 }
+
+/*----------------------------------------------Header----------------------------------------------*/
+.headerContainer img {
+   opacity: 0;
+   position: absolute;
+   top: 2%;
+   left: 5%;
+   animation: fadeIn ease 3s 3s forwards;
+ }
+
+ .logo {
+    background-color: #E7635D;
+   border-radius: 50%;
+   padding: 0.5rem;
+   width: 10rem;
+
+}
+
+.logo:hover{
+   border: 3px dotted #ededc3;
+   border-radius: 50%;
+}
+
 /*----------------------------------------------HOME----------------------------------------------*/
-/* i::before{
-  background:transparent
-}
-i {
-  text-shadow: 2px 2px #000000;
-  color:white;
-  font-size: 8rem;
-} */
 
 .homeContainer{
-  padding-top: 5%;
-  height: 95%;
+   padding-top: 5%;
+   height: 75vh;
 }
+
 .homeContainer h1 {
+  color: #ededc3;
   margin-top: 100px;
   font-size:calc(20px + 6vw);
   text-transform: uppercase;
-  color: red;
   animation: fadeIn ease 3s;
   text-shadow: 2px 2px 2px #000000;
 }
+
 .homeContainer p {
   font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   font-size:calc(12px + 1.5vw);
   opacity: 0;
-  color: #E7635D;
+  color: #d03529;
   animation: fadeIn ease 3s 1s forwards;
 }
-.headerContainer img {
-  opacity: 0;
-  position: absolute;
-  top: 3%;
-  left: 7%;
-  animation: fadeIn ease 3s 3s forwards;
-}
+
 .startButton {
-  opacity: 0;
-  margin: 5%;
-  padding: 10px 50px;
-  background-color: red;
-  border: 2px solid black;
-  animation: fadeIn ease 3s 3s forwards;
+   color: #f9f9ed;
+   opacity: 0;
+   margin-top: 150px;
+   padding: 2rem 3rem;
+   font-size: 4.5rem;
+   background-color: #d03529;
+   border: 2px solid #ededc3;
+   animation: fadeIn ease 3s 3s forwards;
+   border-radius: 50%;
 }
 .startButton:hover {
-  border: 2px solid #f9f9ed;
-  color: #f9f9ed;
+   border: 2px solid #d03529;
+   background-color: #ededc3;
+   color: #d03529;
 }
 
 @keyframes fadeIn {
@@ -148,8 +169,16 @@ i {
   padding: 10px;
 }
 
-.categoryItem h3 {
+h3 {
+   color: #e7635d;
+   /* font-style: italic; */
+   font-size: 4rem;
+   letter-spacing: 1.6rem;
+   margin: 5rem 0;
+}
+.categoryItem h4 {
   padding: 10px;
+  letter-spacing: 1rem;
 }
 .categoryItem:hover{
    background-color: #ededc3;
@@ -260,16 +289,9 @@ footer {
   color: #f9f9ed;
   text-align: center;
   text-shadow: 2px 2px 2px #000000;
-  height: 30px;
+  height: 3vh;
+  background-color: black;
 }
-
-/* @media (max-height: 800px) {
-  footer {
-    display: none;
-  }
-} */
-
-
 
 /*------------------------------------------------CategoryForm---------------------------------------*/
 .formContainer{
@@ -341,4 +363,72 @@ footer {
 ::placeholder {
   color: #e7635d;
   font-size: 2rem;
+}
+
+/*------------------------------------------------MEDIA QUERIES---------------------------------------------*/
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .categoryContainer {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  .categoryContainer a {
+    width: 50%;
+  }
+  .categoryImg img {
+    height: 300px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .category {
+    display: flex;
+    flex-direction: column;
+  }
+  .category h1 {
+    text-align: right;
+    width: 60%;
+    align-self: flex-end;
+  }
+  .categoryContainer {
+    flex-direction: column;
+  }
+  .categoryContainer a {
+    width: 100%;
+  }
+  .categoryName {
+    margin: 0;
+    align-self: flex-end;
+  }
+  .categoryName h2 {
+    font-size: 7rem;
+  }
+  .formContainer {
+    flex-direction: column;
+    align-content: center;
+  }
+  .categoryForm {
+    width: 90%;
+  }
+  .quoteContainer{
+    width: 60%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .quoteContainer {
+    margin-left: auto; 
+    margin-right: auto;
+    bottom: 20rem;
+    left: 0; 
+    right: 0;
+    width: 80%;
+  }
+  .headerContainer img {
+    left: 8%;
+  }
 }

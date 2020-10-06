@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
@@ -79,6 +80,10 @@ class Slideshow extends Component{
                <button className="speedInterval">x2</button>
                <button className="speedInterval">x3</button>
                <button className="speedInterval">x5</button>
+               <button 
+               onClick={() => this.handleClick()} 
+               className="stopSlide">End</button>
+               
             </div>
          </div>      
       )
