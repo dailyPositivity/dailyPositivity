@@ -30,12 +30,13 @@ a {
   text-decoration: none;
 }
 
+
 #root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  background-image: linear-gradient(#d03529, #ededc3);
+  min-height: 100vh;
+  /* background-image: linear-gradient(#d03529, #ededc3); */
   /* --main-logo-color:#d03529;
   --main-body-color:#ededc3;
   --main-highlight-color:#e7635d; */
@@ -43,6 +44,7 @@ a {
 
 body {
   /* background-color: #ededc3; */
+  background-image: linear-gradient(#d03529, #ededc3);
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
@@ -345,4 +347,72 @@ footer {
 ::placeholder {
   color: #e7635d;
   font-size: 2rem;
+}
+
+/*------------------------------------------------MEDIA QUERIES---------------------------------------------*/
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .categoryContainer {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  .categoryContainer a {
+    width: 50%;
+  }
+  .categoryImg img {
+    height: 300px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .category {
+    display: flex;
+    flex-direction: column;
+  }
+  .category h1 {
+    text-align: right;
+    width: 60%;
+    align-self: flex-end;
+  }
+  .categoryContainer {
+    flex-direction: column;
+  }
+  .categoryContainer a {
+    width: 100%;
+  }
+  .categoryName {
+    margin: 0;
+    align-self: flex-end;
+  }
+  .categoryName h2 {
+    font-size: 7rem;
+  }
+  .formContainer {
+    flex-direction: column;
+    align-content: center;
+  }
+  .categoryForm {
+    width: 90%;
+  }
+  .quoteContainer{
+    width: 60%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .quoteContainer {
+    margin-left: auto; 
+    margin-right: auto;
+    bottom: 20rem;
+    left: 0; 
+    right: 0;
+    width: 80%;
+  }
+  .headerContainer img {
+    left: 8%;
+  }
 }
