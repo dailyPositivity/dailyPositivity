@@ -14,7 +14,7 @@ class Form extends Component{
    /*-----------------------------------Submit handler for move to slidshow Component ----------------*/
    render(){
       //filter categoryList array as per passed in category by Category Component
-      const {name,path,description} = {...this.getCategoryImagePath()};
+      const {name,path} = {...this.getCategoryImagePath()};
       const categoryBackground = {
          backgroundImage: 'url(' + path + ')'
      }

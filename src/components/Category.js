@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link } from 'react-router-dom';
 import categoryList from '../categoryList';
+import Load from './saveSlideshow/LoadSlideshow.js';
+
 
 class Category extends Component{
    render(){
@@ -24,6 +26,7 @@ class Category extends Component{
                }
             </div>
             <h3>Choose your vibe...</h3>
+            <Load/>
          </div>
       )//End of return
    }//End of render()

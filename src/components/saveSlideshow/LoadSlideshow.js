@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Firebase from './Firebase.js';
+// import Firebase from './firebase.js';
 
 class LoadSlideshow extends Component{
    render(){

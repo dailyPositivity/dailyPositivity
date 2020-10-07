@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import Ending from './Ending.js';
+import Save from './saveSlideshow/SaveSlideshow.js';
 
 class Slideshow extends Component{
    constructor(props){
@@ -64,10 +66,14 @@ class Slideshow extends Component{
                         <div className="quoteContainer">
                            <p>{this.props.quotes[this.state.currentSlide]}</p>  
                         </div> 
-                     </div>                  
-                     : <h2 className="endingMessage">Thank you for watching</h2>  
+                     </div>     
+            // ending component  
+                     : <div>
+                           <Ending/>
+                           <Save/>
+                        </div>
                      )             
-                  : <h2 className="endingMessage">Category not selected.Select the category first.</h2>  
+                  : <h2 className="endingMessage">Category not selected.Select the category first.</h2> 
                }      
             </div>
             <button className = "slideshowBtnRight" disabled={this.state.currentSlide === this.props.images.length}>
@@ -80,9 +86,7 @@ class Slideshow extends Component{
                <button className="speedInterval">x2</button>
                <button className="speedInterval">x3</button>
                <button className="speedInterval">x5</button>
-               <button 
-               onClick={() => this.handleClick()} 
-               className="stopSlide">End</button>
+               <button onClick={() => this.handleClick()}       className="stopSlide">End</button>
                
             </div>
          </div>      

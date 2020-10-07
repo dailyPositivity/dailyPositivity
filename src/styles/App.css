@@ -79,11 +79,11 @@ h1 {
  }
 
  .logo {
-    background-color: #E7635D;
+   background-color: #E7635D;
+   border: 3px solid #ededc300;
    border-radius: 50%;
    padding: 0.5rem;
    width: 10rem;
-
 }
 
 .logo:hover{
@@ -227,15 +227,52 @@ h3 {
   object-fit: cover;
 }
 
+/*-----------------------------Ending Component-------------------------------*/
+.endingSlide {
+   margin-top: 50vh;
+   margin-bottom: 10vh;
+}
+
 .endingMessage{
   font-family: 'Barlow', sans-serif;
   font-size: 4rem;
+  font-weight: bolder;
+  letter-spacing: 1.1rem;
   color:#f9f9ed;
   text-shadow: 2px 2px 2px #1c0b0a;
   position:relative;
-  top:50%;
   left:50%;
   transform: translate(-50%, -50%);
+}
+.endingMessage h2 {
+   margin: 2rem 0;
+}
+
+.replayBtn,
+.saveBtn{
+   background-color: #d03529;
+   color: #f9f9ed;
+   font-family: 'Barlow', sans-serif;
+   font-size: 2rem;
+   margin: 2rem 4rem;
+   padding: 1rem;
+   border-radius: 1.5rem;
+}
+
+.saveBtn:hover{
+   background-color: #E7635D;
+   color: #ededc3;
+}
+
+.saveBtn:focus{
+   background-color: #E7635D;
+   color: #ededc3;
+}
+
+.replayBtn:focus,
+.replayBtn:hover{
+   background-color: #E7635D;
+   color: #ededc3;
 }
 
 .imageContainer {
@@ -295,27 +332,27 @@ footer {
 
 /*------------------------------------------------CategoryForm---------------------------------------*/
 .formContainer{
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 97vh;
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 97vh;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
 }
 .categoryName h2{
-  font-size: 8rem;
-  font-weight: bold;
-  color:#ededc3;
-  font-family: 'Cormorant Garamond', serif;
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 8rem;
+   font-weight: bold;
+   color:#ededc3;
 }
 .categoryForm{
-  width:40%;
-  align-self: flex-end;
-  margin-bottom:50px;
-  background-color: rgb(237, 237, 196);
-  padding:2rem;
-  border-radius: 15px;
+   width:40%;
+   align-self: flex-end;
+   margin-bottom:50px;
+   background-color: rgb(237, 237, 196);
+   padding:2rem;
+   border-radius: 15px;
 }
 .categoryForm legend{
   margin-bottom: 20px;
