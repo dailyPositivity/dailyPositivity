@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/dailyPositivity/static/css/main.9ceb6cb5.chunk.css",
+    "main.js": "/dailyPositivity/static/js/main.5fe5dfec.chunk.js",
+    "main.js.map": "/dailyPositivity/static/js/main.5fe5dfec.chunk.js.map",
+    "runtime-main.js": "/dailyPositivity/static/js/runtime-main.0a52199f.js",
+    "runtime-main.js.map": "/dailyPositivity/static/js/runtime-main.0a52199f.js.map",
+    "static/js/2.8ddd9479.chunk.js": "/dailyPositivity/static/js/2.8ddd9479.chunk.js",
+    "static/js/2.8ddd9479.chunk.js.map": "/dailyPositivity/static/js/2.8ddd9479.chunk.js.map",
+    "index.html": "/dailyPositivity/index.html",
+    "precache-manifest.dc2f80400a7e92350463b6ecb443e4b0.js": "/dailyPositivity/precache-manifest.dc2f80400a7e92350463b6ecb443e4b0.js",
+    "service-worker.js": "/dailyPositivity/service-worker.js",
+    "static/css/main.9ceb6cb5.chunk.css.map": "/dailyPositivity/static/css/main.9ceb6cb5.chunk.css.map",
+    "static/js/2.8ddd9479.chunk.js.LICENSE.txt": "/dailyPositivity/static/js/2.8ddd9479.chunk.js.LICENSE.txt",
+    "static/media/category-beach.jpg": "/dailyPositivity/static/media/category-beach.4e66105d.jpg",
+    "static/media/category-desert.jpg": "/dailyPositivity/static/media/category-desert.a1491f68.jpg",
+    "static/media/category-forest.jpg": "/dailyPositivity/static/media/category-forest.daa6dbd4.jpg",
+    "static/media/category-sky.jpg": "/dailyPositivity/static/media/category-sky.d8750fd5.jpg",
+    "static/media/category-space.jpg": "/dailyPositivity/static/media/category-space.9cf94e4d.jpg",
+    "static/media/category-twilight.jpg": "/dailyPositivity/static/media/category-twilight.5b4222fd.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a52199f.js",
+    "static/js/2.8ddd9479.chunk.js",
+    "static/css/main.9ceb6cb5.chunk.css",
+    "static/js/main.5fe5dfec.chunk.js"
+  ]
+}
