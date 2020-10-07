@@ -4,7 +4,6 @@ import axios from 'axios';
 import { BrowserRouter as Router, Route  } from 'react-router-dom';
 // Components
 import Category from './components/Category';
-import Ending from './components/Ending';
 import Form from './components/Form';
 import Home from './components/Home';
 import Slideshow from './components/Slideshow';

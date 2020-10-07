@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Ending from './Ending.js';
 import Save from './saveSlideshow/SaveSlideshow.js';
 
 class Slideshow extends Component{
@@ -18,7 +17,7 @@ class Slideshow extends Component{
       this.props.getImages(category);
       this.props.getQuotes();
 
-      setInterval(this.autoPlay,3000);
+      setInterval(this.autoPlay,100);
    }
 
    prevNextHandler = (event) => {
@@ -69,8 +68,7 @@ class Slideshow extends Component{
                      </div>     
             // ending component  
                      : <div>
-                           <Ending/>
-                           <Save/>
+                           <Save images={this.props.images} quotes={this.props.quotes}/>
                         </div>
                      )             
                   : <h2 className="endingMessage">Category not selected.Select the category first.</h2> 
