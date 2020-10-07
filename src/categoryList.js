@@ -1,31 +1,31 @@
 const catagoryList=[
      {
-          name:"Twilight",
+          name:"twilight",
           path:require("./Assets/category-twilight.jpg"), // Photo by Hassan Maayiz on Unsplash
           description:"a twilight image"
      },
      {
-          name:"Nature",
+          name:"nature",
           path:require("./Assets/category-forest.jpg"),
           description:"a nature image"
      },
      {
-          name:"Space",
+          name:"space",
           path:require("./Assets/category-space.jpg"),
           description:"a space image"
      },
      {
-          name:"Desert",
+          name:"desert",
           path:require("./Assets/category-desert.jpg"), // Photo by Mark Eder on Unsplash
           description:"a desert image"
      },
      {
-          name:"Beach",
+          name:"beach",
           path:require("./Assets/category-beach.jpg"),
           description:"a beach image"
      },
      {
-          name:"Sky",
+          name:"sky",
           path:require("./Assets/category-sky.jpg"), // Photo by Anthony Cantin on Unsplash
           description:"a sky image"
      },
