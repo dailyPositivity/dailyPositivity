@@ -213,6 +213,8 @@ h3 {
 .slideshowBtnRight,
 .slideshowBtnLeft {
    background-color: #E7635D;
+   font-weight: bold;
+   font-size: 3rem;
 }
 
 .slideshowContainer{
@@ -270,21 +272,22 @@ h3 {
    border-radius: 1.5rem;
    background-color: #E7635D;
 }
-.slideSpeed button{
-   background-color: inherit;
-   color: #f9f9ed;
-   font-size: 2rem;
-   margin: 0.2rem;
-   padding: 1rem;
-   border-radius: 1.5rem;
+.slideSpeedBtn{
+  background-color: inherit;
+  color: #f9f9ed;
+  font-size: 2rem;
+  margin: 0.2rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
 }
-.slideSpeed button:hover{
-   background-color: #f9f9ed;
-   color: #E7635D;
+.slideSpeedBtn:hover:enabled,
+.slideSpeedBtn:focus:enabled{
+  background-color: #f9f9ed;
+  color: #E7635D;
 }
-.slideSpeed button:focus{
-   background-color: #f9f9ed;
-   color: #E7635D;
+.slideSpeedActiveBtn{
+  background-color: #f9f9ed;
+  color: #E7635D;
 }
 
 /*-------------------------------------------------FOOTER----------------------------------------------*/
