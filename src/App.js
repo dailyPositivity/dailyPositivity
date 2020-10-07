@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import axios from 'axios';
-import { BrowserRouter as Router, Route  } from 'react-router-dom';
+import { HashRouter as Router, Route  } from 'react-router-dom';
 // Components
 import Category from './components/Category';
 import Form from './components/Form';
@@ -81,7 +81,7 @@ class App extends Component {
 
    render(){
       return (
-         <Router>
+         <Router basename="/">
             <header>
                {/* header Component  to shown on every spage */}
                <Header />
