@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class LoadSlideshow extends Component {
    render() {
       return (
-         <h5>Load Slideshow</h5>
-      )
+         <div></div>
+         )
    }
 }
 

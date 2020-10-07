@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Save from './saveSlideshow/SaveSlideshow.js';
+import Save from './saveSlideshow/slideStorage.js';
 
 class Slideshow extends Component{
    constructor(props){

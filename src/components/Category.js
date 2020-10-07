@@ -10,6 +10,7 @@ class Category extends Component{
       return(
 
          <div className = "category wrapper">
+           
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
