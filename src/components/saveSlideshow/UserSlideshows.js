@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firebase.js';
+import LoadSlideshow from './LoadSlideshow.js';
 
 
 class SaveSlideshow extends Component {
@@ -64,7 +65,7 @@ class SaveSlideshow extends Component {
             </div>
             <button onClick={this.handleClick} className="saveBtn">Save Slideshow</button>
             <button className="replayBtn">Replay Slideshow</button>
-            <button className="loadSlideshow">Load Slideshow</button>
+            <LoadSlideshow/>
          </div>
       )
    }

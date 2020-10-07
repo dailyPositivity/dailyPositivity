@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link } from 'react-router-dom';
 import categoryList from '../categoryList';
-import Load from './saveSlideshow/LoadSlideshow.js';
+import LoadSlideshow from './saveSlideshow/LoadSlideshow.js';
 
 
 class Category extends Component{
@@ -10,6 +10,7 @@ class Category extends Component{
       return(
 
          <div className = "category wrapper">
+            <LoadSlideshow/>
             <h3>Choose your vibe</h3>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {

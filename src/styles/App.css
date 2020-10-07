@@ -394,6 +394,7 @@ footer {
 .noteTextArea textarea:active{
   outline:#d03529 solid 1px;
 }
+.loadBtn,
 .slideshowStartBtn{
   height: 50px;
   outline:none;

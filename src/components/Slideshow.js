@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Save from './saveSlideshow/slideStorage.js';
+import Save from './saveSlideshow/UserSlideshows.js';
 
 let timerId = '';//stores setTimeout
 let childTimerId = ''//stores setTimeout

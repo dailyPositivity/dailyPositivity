@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 class LoadSlideshow extends Component {
    render() {
       return (
-         <div></div>
+         <div className="loadSlideshow">
+            <button className="loadBtn">Load Slideshow</button>
+         </div>
          )
    }
 }
