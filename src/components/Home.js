@@ -7,10 +7,12 @@ class Home extends Component{
       return(
          <div className = "wrapper">
             <div className = "homeContainer">
-               <div className="titleContainer">
-                  <h1>Daily <span>Positivity</span></h1>
+               <div className="titleFlexContainer">
+                  <div className="titleContainer">
+                     <h1>Daily <span>Positivity</span></h1>
+                  </div>
+                  <p>Find your positive vibes.</p>
                </div>
-               <p>Find your positive vibes.</p>
                <Link to = "/category">
                   <button className = "startButton">
                      <i className="fa fa-chevron-down"></i>
