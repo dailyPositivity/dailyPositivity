@@ -463,6 +463,9 @@ footer {
 
 /* Landscape phones and down */
 @media only screen and (orientation: portrait) and (max-width: 480px) {
+  .categoryContainer {
+    margin-top: 5%;
+  }
   .quoteContainer {
     margin-left: auto; 
     margin-right: auto;
@@ -472,6 +475,12 @@ footer {
   }
   .slideshowBtnRight, .slideshowBtnLeft {
     padding: 5px 12px;
+  }
+  .category h3 {
+    margin-top: 7%;
+  }
+  .categoryName h2{
+    font-size: 5rem;
   }
 }
 
@@ -489,7 +498,7 @@ footer {
     flex-direction: column;
   }
   .categoryContainer {
-    margin-top: 2%;
+    margin-top: 4%;
     margin-bottom: 2%;
   }
   .categoryContainer a {
@@ -504,7 +513,7 @@ footer {
   }
   .categoryForm {
     height: 80vh;
-    width: 70%;
+    width: 65%;
     margin: 5px 5px 5px 10px;
   }
   .noteTextArea textarea{
@@ -517,7 +526,7 @@ footer {
     padding: 0.8rem;
   }
   .categoryName h2{
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .startButton {
     margin-top: 2%;
