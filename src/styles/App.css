@@ -313,6 +313,7 @@ footer {
   font-size: 8rem;
   font-weight: bold;
   color:#ededc3;
+  text-shadow: 2px 2px 2px #d03529;
   font-family: 'Cormorant Garamond', serif;
 }
 .categoryForm{
