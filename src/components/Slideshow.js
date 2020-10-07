@@ -48,7 +48,7 @@ class Slideshow extends Component{
          }); 
          if(event.target.name === 'play'){ //restart the slideshow timer on click of play
             this.callSetTimeOut();
-            if(this.state.currentSlide > this.props.images.length){ //if slideshow ended restart the slideshow on click of play button
+            if(this.state.currentSlide === this.props.images.length){ //if slideshow ended restart the slideshow on click of play button
                this.setState({
                   currentSlide:0
                })
@@ -80,9 +80,9 @@ class Slideshow extends Component{
    //Called from render to disable the speed,play and pause buttons
    disableSpeedButton = (button) => {
       if(button === 'pause' || button === 'play')
-         return (this.state.currentSlide>this.props.images.length);
+         return (this.state.currentSlide === this.props.images.length);
       else
-         return(this.state.currentSlide>this.props.images.length || activeClass[0] === true)
+         return(this.state.currentSlide === this.props.images.length || activeClass[0] === true)
    }
 
    //Called from ComponentDidMount to start the slideshow 
