@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9246978381b4932956601f9a540710f8",
+    "revision": "8bcdf3c20b24531ac1a09fd6daff88c5",
     "url": "/dailyPositivity/index.html"
   },
   {
-    "revision": "0fee1a5085e0901a9bd5",
-    "url": "/dailyPositivity/static/css/main.a080e2f7.chunk.css"
+    "revision": "192aaeea5d79d8d21eb2",
+    "url": "/dailyPositivity/static/css/main.a5745d33.chunk.css"
   },
   {
-    "revision": "12799c4d64c766eb7973",
-    "url": "/dailyPositivity/static/js/2.324b891b.chunk.js"
+    "revision": "49fdba33da60c4eca6ab",
+    "url": "/dailyPositivity/static/js/2.73e82f57.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/dailyPositivity/static/js/2.324b891b.chunk.js.LICENSE.txt"
+    "url": "/dailyPositivity/static/js/2.73e82f57.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0fee1a5085e0901a9bd5",
-    "url": "/dailyPositivity/static/js/main.9b06ef6d.chunk.js"
+    "revision": "192aaeea5d79d8d21eb2",
+    "url": "/dailyPositivity/static/js/main.304c26eb.chunk.js"
   },
   {
     "revision": "75ac16c64fb6e57cc6a7",
