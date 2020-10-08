@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a92d321de38d2937184559a5eb654af6",
+    "revision": "9246978381b4932956601f9a540710f8",
     "url": "/dailyPositivity/index.html"
   },
   {
-    "revision": "65e603b8c315f066fd5f",
-    "url": "/dailyPositivity/static/css/main.2b102043.chunk.css"
+    "revision": "0fee1a5085e0901a9bd5",
+    "url": "/dailyPositivity/static/css/main.a080e2f7.chunk.css"
   },
   {
     "revision": "12799c4d64c766eb7973",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dailyPositivity/static/js/2.324b891b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65e603b8c315f066fd5f",
-    "url": "/dailyPositivity/static/js/main.9fc06214.chunk.js"
+    "revision": "0fee1a5085e0901a9bd5",
+    "url": "/dailyPositivity/static/js/main.9b06ef6d.chunk.js"
   },
   {
     "revision": "75ac16c64fb6e57cc6a7",
