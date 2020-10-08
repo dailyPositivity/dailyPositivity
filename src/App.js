@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import axios from 'axios';
 import { HashRouter as Router, Route  } from 'react-router-dom';
+
 // Components
 import Category from './components/Category';
-import Ending from './components/Ending';
 import Form from './components/Form';
 import Home from './components/Home';
 import Slideshow from './components/Slideshow';
@@ -44,13 +44,15 @@ class App extends Component {
                photographer: obj.user.name,
             }
          })
+
+         // store the image info as an array in the state
          this.setState({
             imageArray: results,
          })
       })
    }
    
-   // handleChange
+   // used to save the current value of text input fields to the state
    handleChange = (event) => {
       this.setState({
          [event.target.name]: event.target.value
@@ -86,10 +88,12 @@ class App extends Component {
    render(){
       return (
          <Router basename="/">
+            {/* header: present on every route */}
             <header>
-               {/* header Component  to shown on every spage */}
                <Header />
             </header>
+
+            {/* main section */}
             <main>
                <div className="App">
                   <Route exact path = "/" component = {Home}/>
@@ -109,8 +113,9 @@ class App extends Component {
                   </Route>
                </div>
             </main>
+
+            {/* footer: present on every route */}
             <footer>
-               {/* footer component to be shown on every page */}
                <Footer/>
             </footer>
          </Router>
@@ -119,7 +124,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Form.js
-// Slideshow.js
-// Ending.js
