@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class Header extends Component{
     render(){
-        console.log(this.props.match)
         return(
             <div className = "wrapper">
                 <div className ={this.props.class}>
@@ -21,4 +20,4 @@ class Header extends Component{
    }
 }
 
-export default withRouter(Header);
+export default Header;
