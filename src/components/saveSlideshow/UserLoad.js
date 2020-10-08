@@ -15,14 +15,10 @@ class UserLoad extends Component {
       //  });
        firebase.auth().onAuthStateChanged((user) => {
          if (user) {
-           // User is signed in.
-         //   const isAnonymous = user.isAnonymous;
            const uid = user.uid;
             this.setState({
                userId: uid,
             }
-            // Check if auth key works
-            // , () => console.log(this.state.userId)
             )
          } 
        });
@@ -43,10 +39,53 @@ class UserLoad extends Component {
       // use set() to allow custom saves
       dbRef.child(this.state.userId).push(userSlideshow);
    }
+   
+   handleRemove = (slideshowData) => {
+      // 8.5 delete book from firebase
+      console.log(slideshowData);
+   }
+   
    render() {
       return (
+         
          <div className="loadSlides">
-            <button className="loadBtn">Load Slideshow</button>
+            <ul>
+           <h1>Bookshelf</h1>
+           {
+              //4.0 display books here adding this.state.books.map
+              this.state.books.map((book) =>{
+                 return(
+                    <li key={slideshowData.key}>
+                       <p>{slide.images} - {slide.quotes}</p>
+                       {/* 8.2 add onclick to button */}
+                       <button onClick={this.handleRemove(slideshowData.key)}><span role="img" aria-label="delete emoji">🆇</span></button>
+                       {/* 8.3 go to top of render */}
+                    </li>
+                  // 7.2 add book.title to add key value to children
+                  //   <li>
+                  //      <p>{book}</p>
+                  //   </li>
+                 )
+              })
+         // 4.2 create form for user input
+           }
+           <form action="submit">
+              <label htmlFor="newBook">Add new book: </label>
+              {/* 
+              // 4.3 trigger .on change 
+              // 4.4 if user adds data, add onChange
+              // 4.5 set default value to be this.state.userInput 
+              // 4.6 add handlechange event listener above render
+              */}
+               <input type="text" id="newBook" onChange={this.handleChange} value={this.state.userInput} />
+               {/* 
+               // 6.1 if button is clicked
+               // 6.2 use onClick={...} and add function inside called handleClick
+               // 6.3 go up to render
+                */}
+               <button onClick={this.handleClick} className="loadBtn">Load Slideshow</button>
+           </form>
+           </ul>
          </div>
          )
    }
