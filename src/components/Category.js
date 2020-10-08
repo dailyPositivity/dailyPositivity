@@ -6,17 +6,18 @@ class Category extends Component{
    render(){
       const categories = categoryList;
       return(
-         <div className = "wrapper">
-            <h1>Pick Category</h1>
+
+         <div className = "category wrapper">
+            <h3>Choose your vibe</h3>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
                      return (
-                        <Link to = {`/category/:${category}`}>
-                           <div key = {index}>
+                        <Link to = {`/category/${category.name}`} key={index}>
+                           <div className="categoryItem">
                               <div className = "categoryImg">
                                  <img src={category.path} alt = {category.description}/>
                               </div>
-                              <h3>{category.name}</h3>
+                              <h4>{category.name}</h4>
                            </div>
                         </Link>
                      )

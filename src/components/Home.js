@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import {Link } from 'react-router-dom';
 
+
 class Home extends Component{
-   render(){
+   render() {
       return(
          <div className = "wrapper">
             <div className = "homeContainer">
-               <h1>Home Component</h1>
-            </div>
-            <div>
+               <div className="titleFlexContainer">
+                  <div className="titleContainer">
+                     <h1>Daily <span>Positivity</span></h1>
+                  </div>
+                  <p>Find your positive vibes.</p>
+               </div>
                <Link to = "/category">
-                  <button>
+                  <button className = "startButton">
                      <i className="fa fa-chevron-down"></i>
                   </button>
                </Link> 
@@ -19,5 +23,4 @@ class Home extends Component{
       )
    }
 }
-
 export default Home;
