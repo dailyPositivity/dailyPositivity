@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import axios from 'axios';
-import { HashRouter as Router, Route  } from 'react-router-dom';
+import { BrowserRouter as Router, Route  } from 'react-router-dom';
 
 // Components
 import Category from './components/Category';
@@ -20,7 +20,6 @@ class App extends Component {
          userQuote1: '',
          userQuote2: '',
          userQuote3: '',
-
       }
    }
 
@@ -87,7 +86,7 @@ class App extends Component {
 
    render(){
       return (
-         <Router basename="/">
+         <Router basename="/dailyPositivity">
             {/* header: present on every route */}
             <header>
                <Header />
