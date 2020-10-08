@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import axios from 'axios';
 import { HashRouter as Router, Route  } from 'react-router-dom';
+
 // Components
 import Category from './components/Category';
 import Form from './components/Form';
@@ -19,7 +20,7 @@ class App extends Component {
          userQuote1: '',
          userQuote2: '',
          userQuote3: '',
-
+         headerClass: 'headerContainer',
       }
    }
 
@@ -37,19 +38,21 @@ class App extends Component {
          const results = response.data.results.map((obj) => {
             // capture the important values from the Unsplash response
             return {
-               url: obj.urls.full,
+               url: obj.urls.regular,
                alt: obj.alt_description,
                id: obj.id,
                photographer: obj.user.name,
             }
          })
+
+         // store the image info as an array in the state
          this.setState({
             imageArray: results,
          })
       })
    }
    
-   // handleChange
+   // used to save the current value of text input fields to the state
    handleChange = (event) => {
       this.setState({
          [event.target.name]: event.target.value
@@ -60,32 +63,49 @@ class App extends Component {
    getQuotes = () => {
       // create array of non-empty quotes inputted by user
       const { userQuote1, userQuote2, userQuote3 } = this.state;
-      const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0)
+      const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0);
 
+      // generate a number to randomize the quotes we receive
+      const random = Math.floor(Math.random() * 1000);
+
+      // request 10 quotes from quotable
       axios({
-         url: `https://api.quotable.io/quotes?limit=${10 - userQuotes.length}`
+         url: `https://api.quotable.io/quotes?limit=${10 - userQuotes.length}&skip=${random}`
       })
       .then((response) => {
+         // filter out the quotes from the responses
          const results = response.data.results.map((quoteObject) => {
-            /* TODO: decide if we want to include author,
-                     and if so, how to handle user-inputted quotes (author field?) */
             return quoteObject.content;
          })
+
+         // store the quotes as an array in the state
          this.setState({
-            /* TODO: decide if we want to shuffle the quote array
-                     or have userQuotes at fixed positions */
             quoteArray: userQuotes.concat(results),
          })
       })
    }
+   headerChange = () => {
+      this.setState({
+         headerClass: "headerContainer slideContainer",
+      })
+   }
+   headerRevert = () => {
+      this.setState({
+         headerClass: "headerContainer",
+      })
+   }
+
 
    render(){
       return (
-         <Router basename="/">
+         <Router basename="/dailyPositivity">
+        
+            {/* header: present on every route */}
             <header>
-               {/* header Component  to shown on every spage */}
-               <Header />
+               <Header changeHeader={this.state.headerClass} revert={this.headerRevert} />
             </header>
+
+            {/* main section */}
             <main>
                <div className="App">
                   <Route exact path = "/" component = {Home}/>
@@ -93,7 +113,7 @@ class App extends Component {
                      <Category handleSelect={this.getImages} />
                   </Route>
                   <Route exact path = "/category/:categoryName">
-                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} />
+                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} slide={this.headerChange} />
                   </Route>
                   <Route exact path="/category/:categoryName/slideshow">
                      <Slideshow
@@ -105,8 +125,9 @@ class App extends Component {
                   </Route>
                </div>
             </main>
+
+            {/* footer: present on every route */}
             <footer>
-               {/* footer component to be shown on every page */}
                <Footer/>
             </footer>
          </Router>
@@ -115,7 +136,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Form.js
-// Slideshow.js
-// Ending.js

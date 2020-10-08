@@ -42,8 +42,8 @@ body {
 }
 
 .titleContainer{
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
@@ -74,12 +74,12 @@ h1 {
    animation: fadeIn ease 3s 3s forwards;
  }
 
+
  .logo {
-   background-color: #E7635D;
-   border: 3px solid #ededc300;
-   border-radius: 50%;
-   padding: 0.5rem;
-   width: 10rem;
+    background-color: #E7635D;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 10rem;
 }
 
 .logo:hover{
@@ -142,6 +142,10 @@ h1 {
   100% {
     opacity:1;
   }
+}
+
+.slideContainer img {
+  background-color: hsla(3, 74%, 64%, 0);
 }
 
 /*----------------------------------------------CATEGORY----------------------------------------------*/
@@ -336,6 +340,7 @@ h3 {
 .slideSpeedBtn:focus:enabled{
   background-color: #f9f9ed;
   color: #E7635D;
+  outline:#d03529 solid 1px;
 }
 .slideSpeedActiveBtn{
   background-color: #f9f9ed;
@@ -556,9 +561,23 @@ footer {
   }
 }
 @media only screen and (orientation: landscape) and (max-device-width: 850px) {
+  .homeContainer{
+    display: flex;
+    justify-content: space-around;
+ }
+  .homeContainer a {
+    height: 100%;
+    align-self: center;
+ }
   .homeContainer h1 {
     margin-top: 1%;
   }
+  .homeContainer h1, .homeContainer p {
+    text-align: left;
+  }
+  .startButton {
+    transform: rotate(-90deg);
+ }
   .category {
     display: flex;
     flex-direction: column;
