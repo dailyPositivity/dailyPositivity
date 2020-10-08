@@ -5,7 +5,7 @@ class UserLoad extends Component {
    constructor(){
       super();
       this.state = {
-         userSlideshow: [],
+         slideshowData: [],
       };
    }
 
@@ -26,9 +26,13 @@ class UserLoad extends Component {
    render() {
       return (
          <div className="loadSlides">
-            <div className="container">
-               <button onClick={this.handleClick} className="loadBtn">Load Slideshow</button>
-            </div>
+            {this.props.data.map((data) => {
+               return(
+                  <div className="container">
+                     <button onClick={this.handleClick} className="loadBtn">Load Slideshow</button>
+                  </div>
+               )
+            })}
          </div>
       )
    }
