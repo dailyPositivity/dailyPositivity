@@ -20,7 +20,7 @@ class App extends Component {
          userQuote1: '',
          userQuote2: '',
          userQuote3: '',
-
+         headerClass: 'headerContainer',
       }
    }
 
@@ -79,13 +79,24 @@ class App extends Component {
          })
       })
    }
+   headerChange = () => {
+      this.setState({
+         headerClass: "headerContainer slideContainer",
+      })
+   }
+   headerRevert = () => {
+      this.setState({
+         headerClass: "headerContainer",
+      })
+   }
+
 
    render(){
       return (
          <Router basename="/">
             <header>
                {/* header Component  to shown on every spage */}
-               <Header />
+               <Header class={this.state.headerClass} revert={this.headerRevert} />
             </header>
             <main>
                <div className="App">
@@ -94,7 +105,8 @@ class App extends Component {
                      <Category handleSelect={this.getImages} />
                   </Route>
                   <Route exact path = "/category/:categoryName">
-                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} />
+                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} slide={
+                        this.headerChange} />
                   </Route>
                   <Route exact path="/category/:categoryName/slideshow">
                      <Slideshow
