@@ -10,7 +10,7 @@ class Slideshow extends Component{
       super(props);
       this.state = {
          currentSlide:0,
-         currentSpeed:3000,
+         currentSpeed:30000,
       }
    }
 
@@ -74,11 +74,11 @@ class Slideshow extends Component{
    setActiveClass =(event) => {
       if(event.target.value === '0')
          activeClass =  [true,false,false,false,false]      
-      else if(event.target.value === '6000')
+      else if(event.target.value === '60000')
          activeClass = [false, true, false,false,false]
-      else if(event.target.value === '3000')
+      else if(event.target.value === '30000')
          activeClass =  [false, false, true,false,false]
-      else if(event.target.value === '1000')
+      else if(event.target.value === '10000')
          activeClass =  [false, false, false,true,false]
       else if(event.target.name === 'end')
          activeClass = [false, false, false,false,true]
@@ -141,10 +141,10 @@ class Slideshow extends Component{
             </button>
             <div className="slideSpeed">
                <button className = {`slideSpeedBtn ${activeClass[0] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='0'     disabled={this.disableSpeedButton('pause')}>||</button>
-               <button className = 'slideSpeedBtn' onClick = {(event) => {this.speedHandler(event);this.setActiveClass(event);}} value='3000' name = 'play'>Play</button>
-               <button className = {`slideSpeedBtn ${activeClass[1] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='6000'  disabled={this.disableSpeedButton()}>x2</button>
-               <button className = {`slideSpeedBtn ${activeClass[2] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='3000'  disabled={this.disableSpeedButton()}>x3</button>
-               <button className = {`slideSpeedBtn ${activeClass[3] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='1000'  disabled={this.disableSpeedButton()}>x5</button>
+               <button className = 'slideSpeedBtn' onClick = {(event) => {this.speedHandler(event);this.setActiveClass(event);}} value='30000' name = 'play'>Play</button>
+               <button className = {`slideSpeedBtn ${activeClass[1] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='60000'  disabled={this.disableSpeedButton()}>x2</button>
+               <button className = {`slideSpeedBtn ${activeClass[2] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='30000'  disabled={this.disableSpeedButton()}>x3</button>
+               <button className = {`slideSpeedBtn ${activeClass[3] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  value='10000'  disabled={this.disableSpeedButton()}>x5</button>
                <button className = {`slideSpeedBtn ${activeClass[4] ? 'slideSpeedActiveBtn' : ''}`}  onClick = {(event) => {this.setActiveClass(event);this.speedHandler(event);}}  name = 'end'>End</button>              
             </div>
          </div>      
