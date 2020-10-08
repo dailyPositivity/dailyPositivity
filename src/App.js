@@ -38,7 +38,7 @@ class App extends Component {
          const results = response.data.results.map((obj) => {
             // capture the important values from the Unsplash response
             return {
-               url: obj.urls.full,
+               url: obj.urls.regular,
                alt: obj.alt_description,
                id: obj.id,
                photographer: obj.user.name,

@@ -42,8 +42,8 @@ body {
 }
 
 .titleContainer{
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
   color:#e7635d;
   font-size: 2rem;
   text-align: center;
@@ -502,9 +502,23 @@ footer {
   }
 }
 @media only screen and (orientation: landscape) and (max-device-width: 850px) {
+  .homeContainer{
+    display: flex;
+    justify-content: space-around;
+ }
+  .homeContainer a {
+    height: 100%;
+    align-self: center;
+ }
   .homeContainer h1 {
     margin-top: 1%;
   }
+  .homeContainer h1, .homeContainer p {
+    text-align: left;
+  }
+  .startButton {
+    transform: rotate(-90deg);
+ }
   .category {
     display: flex;
     flex-direction: column;
