@@ -286,6 +286,8 @@ h3 {
 .loadBtn {
    background-color: #E7635D;
    color: #ededc3;
+   font-size: 1.5rem;
+   margin-right: -2rem;
 }
 .loadBtn:focus,
 .loadBtn:hover {

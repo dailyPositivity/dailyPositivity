@@ -6,7 +6,7 @@ class UserLoad extends Component {
    constructor(){
       super();
       this.state = {
-         userId: "",
+         isEmptyState: true
       }
    }
 
@@ -21,13 +21,16 @@ class UserLoad extends Component {
    }
 
    handleClick(){
-
+      // console.log("Load Slideshow button clicked")
+      
    }
 
    render() {
       return (
          <div className="loadSlides">
-            <button onClick={this.handleClick} className="loadBtn">Load Slideshow</button>
+            <div className="container">
+               <button onClick={this.handleClick} className="loadBtn">Load Slideshow</button>
+            </div>
          </div>
       )
    }
