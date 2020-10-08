@@ -285,6 +285,7 @@ h3 {
 .slideSpeedBtn:focus:enabled{
   background-color: #f9f9ed;
   color: #E7635D;
+  outline:#d03529 solid 1px;
 }
 .slideSpeedActiveBtn{
   background-color: #f9f9ed;
