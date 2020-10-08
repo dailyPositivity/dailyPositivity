@@ -25,10 +25,12 @@ class Form extends Component{
                 </div>             
                <form className = "categoryForm">
                   <fieldset>
-                     <legend><em>Enter Your Quotes Here</em></legend>
-                     <InputQuote name={"userQuote1"} changeHandler={this.props.changeHandler} />
-                     <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} />
-                     <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} />
+                     <legend>
+                        <em>Enter Your Quotes Here</em>
+                     </legend>
+                     <InputQuote name={"userQuote1"} changeHandler={this.props.changeHandler} placeholder={"Add up to 3 of your own quotes."} />
+                     <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} placeholder={"We'll include them in your slideshow."} />
+                     <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} placeholder={"Click the button when you're ready!"} />
                      <Link to={`/category/${name}/slideshow`} >
                      <button type="button" className = "slideshowStartBtn">
                         Start Slideshow
