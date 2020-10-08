@@ -5,14 +5,10 @@ import { Link } from 'react-router-dom';
 class Header extends Component{
     render(){
         return(
-            <div className = "wrapper">
+            <div className="wrapper">
                 <div className ={this.props.changeHeader}>
-                    <Link to = "/" onClick={this.props.revert}>
-                        <img className="logo" src={require("../Assets/misty-day.png")} />
-                        {/* OTHER IMAGES
-                           https://www.flaticon.com/svg/static/icons/svg/1295/1295535.svg
-                           https://www.flaticon.com/svg/static/icons/svg/3159/3159094.svg
-                           https://www.flaticon.com/svg/static/icons/svg/2714/2714077.svg */}
+                    <Link to="/" onClick={this.props.revert}>
+                        <img className="logo" src={require("../Assets/misty-day.png")} alt="Outline of a red sun rising above 3 horizonal red lines." />
                     </Link>
                 </div>
             </div>
