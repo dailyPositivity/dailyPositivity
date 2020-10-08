@@ -24,6 +24,11 @@ class Slideshow extends Component{
 
    //logic to handle slideshow's previous and next arrows functionalty
    prevNextHandler = (event) => {
+      //renove the active class if timer is not running and slide is not pause
+      if(timerId == null && childTimerId === null && this.state.currentSpeed !== 0){
+         activeClass =  [false,false,false,false,false];
+      }
+      //incement and decrement the currentSlide counter on previous and next button
       if(event.target.name === 'previous'){
          if(this.state.currentSlide > 0){
             this.setState({
@@ -48,7 +53,7 @@ class Slideshow extends Component{
          }); 
          if(event.target.name === 'play'){ //restart the slideshow timer on click of play
             this.callSetTimeOut();
-            if(this.state.currentSlide > this.props.images.length){ //if slideshow ended restart the slideshow on click of play button
+            if(this.state.currentSlide === this.props.images.length){ //if slideshow ended restart the slideshow on click of play button
                this.setState({
                   currentSlide:0
                })
@@ -56,10 +61,12 @@ class Slideshow extends Component{
         }     
       }else if(event.target.name === 'end'){//if slideshow ended stop the timer
          this.setState({
-            currentSlide:this.props.images.length+1,
+            currentSlide:this.props.images.length
          });
          clearTimeout(timerId);
          clearTimeout(childTimerId);
+         timerId = null;
+         childTimerId = null;
       }
    }
 
@@ -80,15 +87,15 @@ class Slideshow extends Component{
    //Called from render to disable the speed,play and pause buttons
    disableSpeedButton = (button) => {
       if(button === 'pause' || button === 'play')
-         return (this.state.currentSlide>this.props.images.length);
+         return (this.state.currentSlide === this.props.images.length);
       else
-         return(this.state.currentSlide>this.props.images.length || activeClass[0] === true)
+         return(this.state.currentSlide === this.props.images.length || activeClass[0] === true)
    }
 
    //Called from ComponentDidMount to start the slideshow 
    callSetTimeOut = () => {
          timerId  = setTimeout(()=>{
-         childTimerId = setTimeout(this.callSetTimeOut, this.state.currentSpeed);
+         childTimerId = setTimeout(this.callSetTimeOut, 0);
          if(this.state.currentSlide < this.props.images.length && this.state.currentSpeed > 0){
             const currentState = this.state.currentSlide;
             const currentQuote = this.state.currentQuote;
@@ -96,10 +103,16 @@ class Slideshow extends Component{
                currentSlide:currentState + 1,
                currentQuote:currentQuote + 1,
             });
+            //set active calss to end button on end of slideShow
+            if(this.state.currentSlide+1 === this.props.images.length){
+               activeClass = [false, false, false,false,true];
+            }
          }
          else{
             clearTimeout(timerId);
             clearTimeout(childTimerId);
+            timerId = null;
+            childTimerId = null;
          }
       },this.state.currentSpeed);
    }
@@ -111,18 +124,16 @@ class Slideshow extends Component{
                &lsaquo;
             </button>
             <div className = 'slideImg'>
-               {this.props.images.length > 1 ? 
-                  (  this.state.currentSlide < this.props.images.length ?
-                     <div className='imageContainer'> 
-                        <img src={this.props.images[this.state.currentSlide].url} 
-                        alt={this.props.images[this.state.currentSlide].alt}/>
-                        <div className='quoteContainer'>
-                           <p>{this.props.quotes[this.state.currentSlide]}</p>  
-                        </div> 
-                     </div>                  
-                     : <h2 className='endingMessage'>Thank you for watching</h2>  
-                     )             
-                  : <h2 className='endingMessage'>Category not selected.Select the category first.</h2>  
+               {
+                  this.state.currentSlide < this.props.images.length ?
+                  <div className='imageContainer'> 
+                     <img src={this.props.images[this.state.currentSlide].url} 
+                     alt={this.props.images[this.state.currentSlide].alt}/>
+                     <div className='quoteContainer'>
+                        <p>{this.props.quotes[this.state.currentSlide]}</p>  
+                     </div> 
+                  </div>                  
+                  : ( this.state.currentSlide > 0 && <h2 className='endingMessage'>Thank you for watching</h2>)                              
                }      
             </div>
             <button className = 'slideshowBtnRight' disabled={this.state.currentSlide === this.props.images.length} onClick ={this.prevNextHandler} name='next'>

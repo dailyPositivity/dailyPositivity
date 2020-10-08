@@ -74,11 +74,12 @@ h1 {
    animation: fadeIn ease 3s 3s forwards;
  }
 
+
  .logo {
     background-color: #E7635D;
-   border-radius: 50%;
-   padding: 0.5rem;
-   width: 10rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 10rem;
 }
 
 .logo:hover{
@@ -141,6 +142,10 @@ h1 {
   100% {
     opacity:1;
   }
+}
+
+.slideContainer img {
+  background-color: hsla(3, 74%, 64%, 0);
 }
 
 /*----------------------------------------------CATEGORY----------------------------------------------*/
@@ -285,6 +290,7 @@ h3 {
 .slideSpeedBtn:focus:enabled{
   background-color: #f9f9ed;
   color: #E7635D;
+  outline:#d03529 solid 1px;
 }
 .slideSpeedActiveBtn{
   background-color: #f9f9ed;
