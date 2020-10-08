@@ -102,7 +102,7 @@ class App extends Component {
         
             {/* header: present on every route */}
             <header>
-               <Header class={this.state.headerClass} revert={this.headerRevert} />
+               <Header changeHeader={this.state.headerClass} revert={this.headerRevert} />
             </header>
 
             {/* main section */}
@@ -113,8 +113,7 @@ class App extends Component {
                      <Category handleSelect={this.getImages} />
                   </Route>
                   <Route exact path = "/category/:categoryName">
-                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} slide={
-                        this.headerChange} />
+                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} slide={this.headerChange} />
                   </Route>
                   <Route exact path="/category/:categoryName/slideshow">
                      <Slideshow
