@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dailyPositivity/static/css/main.9ceb6cb5.chunk.css",
-    "main.js": "/dailyPositivity/static/js/main.741322d3.chunk.js",
-    "main.js.map": "/dailyPositivity/static/js/main.741322d3.chunk.js.map",
+    "main.css": "/dailyPositivity/static/css/main.f8defe4b.chunk.css",
+    "main.js": "/dailyPositivity/static/js/main.38d536da.chunk.js",
+    "main.js.map": "/dailyPositivity/static/js/main.38d536da.chunk.js.map",
     "runtime-main.js": "/dailyPositivity/static/js/runtime-main.0a52199f.js",
     "runtime-main.js.map": "/dailyPositivity/static/js/runtime-main.0a52199f.js.map",
     "static/js/2.9419796c.chunk.js": "/dailyPositivity/static/js/2.9419796c.chunk.js",
     "static/js/2.9419796c.chunk.js.map": "/dailyPositivity/static/js/2.9419796c.chunk.js.map",
     "index.html": "/dailyPositivity/index.html",
-    "precache-manifest.6c28770ba1784e2f8be32a4606e0341f.js": "/dailyPositivity/precache-manifest.6c28770ba1784e2f8be32a4606e0341f.js",
+    "precache-manifest.83cd8abc976b54a2b86e2c7eee47b5ae.js": "/dailyPositivity/precache-manifest.83cd8abc976b54a2b86e2c7eee47b5ae.js",
     "service-worker.js": "/dailyPositivity/service-worker.js",
-    "static/css/main.9ceb6cb5.chunk.css.map": "/dailyPositivity/static/css/main.9ceb6cb5.chunk.css.map",
+    "static/css/main.f8defe4b.chunk.css.map": "/dailyPositivity/static/css/main.f8defe4b.chunk.css.map",
     "static/js/2.9419796c.chunk.js.LICENSE.txt": "/dailyPositivity/static/js/2.9419796c.chunk.js.LICENSE.txt",
     "static/media/category-beach.jpg": "/dailyPositivity/static/media/category-beach.4e66105d.jpg",
     "static/media/category-desert.jpg": "/dailyPositivity/static/media/category-desert.a1491f68.jpg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.0a52199f.js",
     "static/js/2.9419796c.chunk.js",
-    "static/css/main.9ceb6cb5.chunk.css",
-    "static/js/main.741322d3.chunk.js"
+    "static/css/main.f8defe4b.chunk.css",
+    "static/js/main.38d536da.chunk.js"
   ]
 }
