@@ -133,7 +133,7 @@ class Slideshow extends Component{
                         <p>{this.props.quotes[this.state.currentSlide]}</p>  
                      </div> 
                   </div>                  
-                  : ( this.state.currentSlide > 0 && <h2 className='endingMessage'>Thank you for watching</h2>)                              
+                  : ( this.state.currentSlide > 0 && <h2 className='endingMessage'>Thanks for watching! Have a great day!</h2>)                              
                }      
             </div>
             <button className = 'slideshowBtnRight' disabled={this.state.currentSlide === this.props.images.length} onClick ={this.prevNextHandler} name='next'>
