@@ -96,7 +96,7 @@ class App extends Component {
          <Router basename="/">
             <header>
                {/* header Component  to shown on every spage */}
-               <Header class={this.state.headerClass} revert={this.headerRevert} />
+               <Header changeHeader={this.state.headerClass} revert={this.headerRevert} />
             </header>
             <main>
                <div className="App">
@@ -105,8 +105,7 @@ class App extends Component {
                      <Category handleSelect={this.getImages} />
                   </Route>
                   <Route exact path = "/category/:categoryName">
-                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} slide={
-                        this.headerChange} />
+                     <Form submitHandler={this.handleSubmit} changeHandler={this.handleChange} slide={this.headerChange} />
                   </Route>
                   <Route exact path="/category/:categoryName/slideshow">
                      <Slideshow

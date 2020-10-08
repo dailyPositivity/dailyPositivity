@@ -6,7 +6,7 @@ class Header extends Component{
     render(){
         return(
             <div className = "wrapper">
-                <div className ={this.props.class}>
+                <div className ={this.props.headerChange}>
                     <Link to = "/" onClick={this.props.revert}>
                         <img className="logo" src={require("../Assets/misty-day.png")} />
                         {/* OTHER IMAGES
