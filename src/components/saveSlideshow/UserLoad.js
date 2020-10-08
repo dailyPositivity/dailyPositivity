@@ -21,10 +21,9 @@ class UserLoad extends Component {
    }
 
    handleClick(){
-      // console.log("Load Slideshow button clicked")
-      
+      console.log("Load Slideshow button clicked")
    }
-
+// create a option 
    render() {
       return (
          <div className="loadSlides">
