@@ -61,20 +61,23 @@ class App extends Component {
    getQuotes = () => {
       // create array of non-empty quotes inputted by user
       const { userQuote1, userQuote2, userQuote3 } = this.state;
-      const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0)
+      const userQuotes = [userQuote1, userQuote2, userQuote3].filter((quote) => quote.length > 0);
 
+      // generate a number to randomize the quotes we receive
+      const random = Math.floor(Math.random() * 1000);
+
+      // request 10 quotes from quotable
       axios({
-         url: `https://api.quotable.io/quotes?limit=${10 - userQuotes.length}`
+         url: `https://api.quotable.io/quotes?limit=${10 - userQuotes.length}&skip=${random}`
       })
       .then((response) => {
+         // filter out the quotes from the responses
          const results = response.data.results.map((quoteObject) => {
-            /* TODO: decide if we want to include author,
-                     and if so, how to handle user-inputted quotes (author field?) */
             return quoteObject.content;
          })
+
+         // store the quotes as an array in the state
          this.setState({
-            /* TODO: decide if we want to shuffle the quote array
-                     or have userQuotes at fixed positions */
             quoteArray: userQuotes.concat(results),
          })
       })
