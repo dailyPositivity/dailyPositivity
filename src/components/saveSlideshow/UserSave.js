@@ -10,22 +10,14 @@ class UserSave extends Component {
       }
    }
    componentDidMount(){
-      // firebase.auth().signInAnonymously().catch(function(error) {
-      //    const errorCode = error.code;
-      //    const errorMessage = error.message;
-      //  });
+      // create firebase.auth that gives each user a specific key
        firebase.auth().onAuthStateChanged((user) => {
          if (user) {
-           // User is signed in.
-         //   const isAnonymous = user.isAnonymous;
            const uid = user.uid;
             this.setState({
                userId: uid,
             }
-            // Check if auth key works 
-            , () => console.log(this.state.userId)
-            )
-         } 
+            )} 
        });
    }
    handleChange = (event) => {
@@ -41,11 +33,12 @@ class UserSave extends Component {
       const userSlideshow = {images:images,quotes:quotes}
       event.preventDefault();
       const dbRef = firebase.database().ref();
-      // use set() to allow custom saves
+      // use user ID as reference to save slideshow to user specified key
       dbRef.child(this.state.userId).push(userSlideshow);
    }
    render() {
       return (
+         // on call 
          <div className="saveSlides">           
             <button onClick={this.handleClick} className="saveBtn">Save Slideshow</button>
          </div>
