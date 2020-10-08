@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Save from './saveSlideshow/UserSlideshows.js';
+import UserSave from './saveSlideshow/UserSave';
 
 let timerId = '';//stores setTimeout
 let childTimerId = ''//stores setTimeout
@@ -14,7 +14,6 @@ class Slideshow extends Component{
          currentSpeed:3000,
       }
    }
-
    componentDidMount() {
       // retrieve images from Unsplash API
       const category = this.props.match.params.categoryName;
@@ -121,7 +120,13 @@ class Slideshow extends Component{
                            <p>{this.props.quotes[this.state.currentSlide]}</p>  
                         </div> 
                      </div>                  
-                     : <h2 className='endingMessage'>Thank you for watching</h2>  
+                     : <div>
+   {/* ***********************************ENDING SLIDE***************************************** */}
+                        <div className="endingSlide">
+                           <h2 className='endingMessage'>Thank you for watching</h2>  
+                           <UserSave images={this.props.images} quotes={this.props.quotes}/>
+                        </div>
+                        </div>
                      )             
                   : <h2 className='endingMessage'>Category not selected.Select the category first.</h2>  
                }      

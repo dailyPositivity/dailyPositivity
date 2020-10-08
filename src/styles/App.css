@@ -255,31 +255,42 @@ h3 {
    margin: 2rem 0;
 }
 
-.replayBtn,
-.saveBtn{
-   background-color: #d03529;
-   color: #f9f9ed;
+.saveSlides{
+
+}
+/* General button styling */
+.loadBtn,
+.saveBtn,
+.replayBtn {
    font-family: 'Barlow', sans-serif;
    font-size: 2rem;
    margin: 2rem 4rem;
    padding: 1rem;
    border-radius: 1.5rem;
 }
-
+.replayBtn,
+.saveBtn {
+   background-color: #d03529;
+   color: #f9f9ed;
+}
+.saveBtn:focus,
 .saveBtn:hover{
    background-color: #E7635D;
    color: #ededc3;
 }
-
-.saveBtn:focus{
-   background-color: #E7635D;
-   color: #ededc3;
-}
-
 .replayBtn:focus,
 .replayBtn:hover{
    background-color: #E7635D;
    color: #ededc3;
+}
+.loadBtn {
+   background-color: #E7635D;
+   color: #ededc3;
+}
+.loadBtn:focus,
+.loadBtn:hover {
+   background-color: #ededc3;
+   color: #E7635D;
 }
 
 .imageContainer {
@@ -350,6 +361,9 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
+.loadSlides{
+   text-align: right;
+}
 .categoryName h2{
   font-size: 8rem;
   font-weight: bold;
@@ -394,7 +408,7 @@ footer {
 .noteTextArea textarea:active{
   outline:#d03529 solid 1px;
 }
-.loadBtn,
+
 .slideshowStartBtn{
   height: 50px;
   outline:none;

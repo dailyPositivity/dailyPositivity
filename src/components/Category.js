@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import {Link } from 'react-router-dom';
+
+// Components
 import categoryList from '../categoryList';
-import LoadSlideshow from './saveSlideshow/LoadSlideshow.js';
+import UserLoad from './saveSlideshow/UserLoad';
 
 
 class Category extends Component{
    render(){
       const categories = categoryList;
       return(
-
          <div className = "category wrapper">
-            <LoadSlideshow/>
+            <UserLoad/>
             <h3>Choose your vibe</h3>
             <div className = "categoryContainer">
                {  categories.map((category,index) => {
