@@ -3,14 +3,13 @@ import {Link } from 'react-router-dom';
 import categoryList from '../categoryList';
 
 class Category extends Component{
-   render(){
+   render() {
       const categories = categoryList;
-      return(
-
+      return (
          <div className = "category wrapper">
             <h3>Choose your vibe</h3>
             <div className = "categoryContainer">
-               {  categories.map((category,index) => {
+               {categories.map((category,index) => {
                      return (
                         <Link to = {`/category/${category.name}`} key={index}>
                            <div className="categoryItem">
@@ -21,8 +20,7 @@ class Category extends Component{
                            </div>
                         </Link>
                      )
-                  })
-               }
+                  })}
             </div>
          </div>
       )//End of return

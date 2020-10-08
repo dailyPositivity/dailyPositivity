@@ -58,7 +58,7 @@ class Slideshow extends Component{
                   currentSlide:0
                })
             }              
-        }     
+      }     
       }else if(event.target.name === 'end'){//if slideshow ended stop the timer
          this.setState({
             currentSlide:this.props.images.length

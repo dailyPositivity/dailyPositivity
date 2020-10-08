@@ -84,11 +84,15 @@ class App extends Component {
          })
       })
    }
+
+   // Changes header image opacity when user moves to slideshow page
    headerChange = () => {
       this.setState({
          headerClass: "headerContainer slideContainer",
       })
    }
+
+   // Changes header image opacity back to normal upon returning to home page
    headerRevert = () => {
       this.setState({
          headerClass: "headerContainer",
@@ -99,7 +103,7 @@ class App extends Component {
    render(){
       return (
          <Router basename="/dailyPositivity">
-        
+
             {/* header: present on every route */}
             <header>
                <Header changeHeader={this.state.headerClass} revert={this.headerRevert} />
@@ -131,7 +135,7 @@ class App extends Component {
                <Footer/>
             </footer>
          </Router>
-       );
+      );
    }
 }
 

@@ -1,12 +1,11 @@
 import React from 'react';
 
 const Footer = () => {
-
     const year  =  new Date().getFullYear();
-    return(
-            <div className = "wrapper">
-                <p>Copyright ⓒ {year}</p>
-            </div>
+    return (
+        <div className = "footer wrapper">
+            <p>Copyright ⓒ {year} - Created at <a href="https://junocollege.com/">Juno College</a></p>
+        </div>
     );
 }
 
