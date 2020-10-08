@@ -14,15 +14,15 @@ class Form extends Component{
    /*-----------------------------------Submit handler for move to slidshow Component ----------------*/
    render(){
       //filter categoryList array as per passed in category by Category Component
-      const {name,path,description} = {...this.getCategoryImagePath()};
+      const {name,path} = {...this.getCategoryImagePath()};
       const categoryBackground = {
          backgroundImage: 'url(' + path + ')'
-     }
-      return(       
-             <div className = "formContainer" style ={categoryBackground}>
-                <div className = "categoryName">
+   }
+      return (       
+            <div className = "formContainer" style ={categoryBackground}>
+               <div className = "categoryName">
                   <h2>{name}</h2>
-                </div>             
+               </div>             
                <form className = "categoryForm">
                   <fieldset>
                      <legend>
@@ -31,10 +31,10 @@ class Form extends Component{
                      <InputQuote name={"userQuote1"} changeHandler={this.props.changeHandler} placeholder={"Add up to 3 of your own quotes."} />
                      <InputQuote name={"userQuote2"} changeHandler={this.props.changeHandler} placeholder={"We'll include them in your slideshow."} />
                      <InputQuote name={"userQuote3"} changeHandler={this.props.changeHandler} placeholder={"Click the button when you're ready!"} />
-                     <Link to={`/category/${name}/slideshow`} >
-                     <button type="button" className = "slideshowStartBtn" onClick={this.props.slide}>
-                        Start Slideshow
-                     </button>
+                     <Link to={`/category/${name}/slideshow`}>
+                        <button type="button" className = "slideshowStartBtn" onClick={this.props.slide}>
+                           Start Slideshow
+                        </button>
                      </Link>
                   </fieldset>
                </form>
