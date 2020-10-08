@@ -342,11 +342,13 @@ footer {
   width:100%;
   height: 50px;
   line-height: 50px;
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 15px;
   background-color: #f9f9ed;
   border:#e7635d 2px;
   padding:0 1rem;
+  color: #e7635d;
+  font-family: 'Barlow', sans-serif;
 }
 .noteTextArea textarea:focus,
 .noteTextArea textarea:active {
